@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard Cespedes | Portafolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span>&lt;RC /&gt;</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">Sobre Mí</a></li>
+                <li><a href="#education">Estudios</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <!--<li><a href="#experience">Experiencia</a></li>-->
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </div>
+            </label>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="about" class="section hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="badge">Computer Science Student</span>
+                    <h1>¡Hola! Soy <span class="highlight">Richard Cespedes</span></h1>
+                    <p class="bio">
+                        Estudiante de Ciencias de la Computación en la <strong>UCV</strong> y desarrollador Full Stack. Apasionado por entender los sistemas desde su arquitectura lógica hasta su implementación práctica. Me especializo en estructurar soluciones bajo arquitectura <strong>MVC</strong>, bases de datos relacionales y diseño de interfaces funcionales.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Contactar</a>
+                        <a href="#projects" class="btn btn-outline"><i class="fas fa-code"></i> Ver Proyectos</a>
+                    </div>
+                </div>
+                <div class="hero-avatar">
+                    <div class="avatar-card">
+                        <img src="Imagenes/Richard_Cespedes.png" alt="Richard Cespedes">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <h2 class="section-title">Estudios & Formación</h2>
+            <div class="grid-cards">
+                <div class="card hover-effect">
+                    <div class="card-icon logo-institution">
+                        <img src="Imagenes/logo.png" alt="Logo Universidad Central de Venezuela">
+                    </div>
+                    <h3>Universidad Central de Venezuela</h3>
+                    <p class="subtitle">Licenciatura en Ciencias de la Computación</p>
+                    <span class="date-badge">2025 – Actualidad</span>
+                    <span class="date-badge">2do Semestre</span>
+                    <p class="description">Bases teóricas sólidas en algoritmos, estructuras de datos y lógica de computación.</p>
+                </div>
+                <div class="card hover-effect">
+                    <div class="card-icon logo-institution">
+                        <img src="Imagenes/logo-uneweb.webp" alt="Logo Uneweb">
+                    </div>
+                    <h3>Uneweb Instituto de Comunicación Web</h3>
+                    <p class="subtitle">Diplomado en Programación Full Stack</p>
+                    <span class="date-badge">2025</span>
+                    <p class="description">Especialización en desarrollo web full stack, arquitectura MVC y bases de datos relacionales.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2 class="section-title">Stack Técnico & Habilidades</h2>
+            <div class="skills-wrapper">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Lenguajes</h3>
+                    <div class="badges-grid">
+                        <span class="skill-badge" style="--hover-color: #f7df1e;"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="skill-badge" style="--hover-color: #777bb4;"><i class="fab fa-php"></i> PHP</span>
+                        <span class="skill-badge" style="--hover-color: #00599c;"><i class="fas fa-file-code"></i> C++</span>
+                        <span class="skill-badge" style="--hover-color: #e34f26;"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="skill-badge" style="--hover-color: #1572b6;"><i class="fab fa-css3-alt"></i> CSS3</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Backend & Bases de Datos</h3>
+                    <div class="badges-grid">
+                        <span class="skill-badge" style="--hover-color: #4479a1;"><i class="fas fa-database"></i> MySQL</span>
+                        <span class="skill-badge" style="--hover-color: #00758f;"><i class="fas fa-server"></i> MySQLi</span>
+                        <span class="skill-badge" style="--hover-color: #3ecf8e;"><i class="fas fa-bolt"></i> Supabase</span>
+                        <span class="skill-badge" style="--hover-color: #f29111;"><i class="fas fa-network-wired"></i> phpMyAdmin</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Librerías, Herramientas & Arquitectura</h3>
+                    <div class="badges-grid">
+                        <span class="skill-badge" style="--hover-color: #f05032;"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="skill-badge" style="--hover-color: #0769ad;"><i class="fas fa-cube"></i> jQuery</span>
+                        <span class="skill-badge" style="--hover-color: #fb7a24;"><i class="fas fa-desktop"></i> XAMPP</span>
+                        <span class="skill-badge" style="--hover-color: #2f81f7;"><i class="fas fa-sitemap"></i> Arquitectura MVC</span>
+                        <span class="skill-badge" style="--hover-color: #8e44ad;"><i class="fas fa-cubes"></i> POO</span>
+                        <span class="skill-badge" style="--hover-color: #007ce2;"><i class="fas fa-exchange-alt"></i> AJAX</span>                        
+                    </div>
+                </div>
+            </div>
+        </section>
+<!--
+        <section id="experience" class="section">
+            <h2 class="section-title">Experiencia</h2>
+            <div class="timeline">
+                <div class="timeline-item hover-effect">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Desarrollador Web Freelance & Proyectos Académicos</h3>
+                        <span class="date-badge">2025 - Presente</span>
+                        <p>Diseño y construcción de aplicaciones web completas utilizando la arquitectura MVC. Gestión de bases de datos relacionales con MySQL y Supabase, integrando dinámicas con JavaScript y jQuery.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+-->
+        <section id="projects" class="section">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div id="projects-container" class="projects-grid">
+            </div>
+            <div id="pagination-container" class="pagination">
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2 class="section-title">Contacto</h2>
+            <p class="section-subtitle">¿Tienes algún proyecto en mente o te gustaría colaborar? ¡Contáctame!</p>
+            <div class="contact-grid">
+                <a href="https://wa.me/584141827058" target="_blank" class="contact-card hover-effect">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>04141827058</p>
+                </a>
+                <a href="mailto:rdavid12142007@gmail.com" class="contact-card hover-effect">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Correo Electrónico</h3>
+                    <p>rdavid12142007@gmail.com</p>
+                </a>
+                <a href="https://linkedin.com/in/richard-david-cespedes-turpial-b9968b29a" target="_blank" class="contact-card hover-effect">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <p>Richard Cespedes</p>
+                </a>
+                <a href="https://github.com" target="_blank" class="contact-card hover-effect">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>github.com</p>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="media-container">
+                    <div id="media-viewer"></div>
+                    <div class="media-controls">
+                        <button id="prev-media" class="btn-media"><i class="fas fa-chevron-left"></i></button>
+                        <span id="media-counter">1/1</span>
+                        <button id="next-media" class="btn-media"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3 id="modal-title"></h3>
+                    <p id="modal-description"></p>
+                    <div class="tech-stack" id="modal-tech"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Richard Cespedes. Guarenas, Miranda, Venezuela.</p>
+    </footer>
+
+    <script src="Javascript/app.js"></script>
+</body>
+</html>
