@@ -3,7 +3,7 @@ const projectsData = [
     {
         id: 1,
         title: "Recopilado de Información UCV",
-        url: "Vista/recopilado-ucv.html",
+        url: "Vistas/recopilado-ucv.html",
         description: "Plataforma web interactiva para buscar material de estudio por semestres académicos y materias.",
         media: [
             { type: "image", url: "Imagenes/recopilado1.png" }
