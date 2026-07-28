@@ -3,9 +3,24 @@ const projectsData = [
     {
         id: 1,
         title: "Recopilado de Información UCV",
-        description: "Plataforma web interactiva para buscar material de estudio por semestres académicos y materias.",
+        description: `Plataforma web interactiva para buscar material de estudio por semestres académicos y materias.
+        <br>Cuenta con:
+        <br>• Chat Bot integrado
+        <br>• Barra de búsqueda
+        <br>• Diseño Responsive
+        <br>• Página 404
+        <br>• Apartado Administrativo`,
         media: [
-            { type: "image", url: "assets/img/recopilado-ucv-1.png" }
+            { type: "image", url: "Imagenes/recopilado1.png" },
+            { type: "image", url: "Imagenes/recopilado2.png" },
+            { type: "image", url: "Imagenes/recopilado3.png" },
+            { type: "image", url: "Imagenes/recopilado4.png" },
+            { type: "image", url: "Imagenes/recopilado5.png" },
+            { type: "image", url: "Imagenes/recopilado6.png" },
+            { type: "image", url: "Imagenes/recopilado7.png" },
+            { type: "image", url: "Imagenes/recopilado8.png" },
+            { type: "image", url: "Imagenes/recopilado9.png" },
+            { type: "image", url: "Imagenes/recopilado10.png" }
         ],
         technologies: ["HTML5", "CSS3", "JavaScript", "Supabase"]
     },
@@ -121,7 +136,9 @@ function openModal(project) {
     currentMediaIndex = 0;
 
     modalTitle.innerText = project.title;
-    modalDescription.innerText = project.description;
+    
+    modalDescription.innerHTML = project.description; 
+    
     modalTech.innerHTML = project.technologies.map(t => `<span class="tech-tag">${t}</span>`).join("");
 
     updateMediaDisplay();
