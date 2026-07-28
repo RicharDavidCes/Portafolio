@@ -3,40 +3,27 @@ const projectsData = [
     {
         id: 1,
         title: "Recopilado de Información UCV",
-        description: `Plataforma web interactiva para buscar material de estudio por semestres académicos y materias.
-        <br>Cuenta con:
-        <br>• Chat Bot integrado
-        <br>• Barra de búsqueda
-        <br>• Diseño Responsive
-        <br>• Página 404
-        <br>• Apartado Administrativo`,
+        url: "Vista/recopilado-ucv.html",
+        description: "Plataforma web interactiva para buscar material de estudio por semestres académicos y materias.",
         media: [
-            { type: "image", url: "Imagenes/recopilado1.png" },
-            { type: "image", url: "Imagenes/recopilado2.png" },
-            { type: "image", url: "Imagenes/recopilado3.png" },
-            { type: "image", url: "Imagenes/recopilado4.png" },
-            { type: "image", url: "Imagenes/recopilado5.png" },
-            { type: "image", url: "Imagenes/recopilado6.png" },
-            { type: "image", url: "Imagenes/recopilado7.png" },
-            { type: "image", url: "Imagenes/recopilado8.png" },
-            { type: "image", url: "Imagenes/recopilado9.png" },
-            { type: "image", url: "Imagenes/recopilado10.png" }
+            { type: "image", url: "Imagenes/recopilado1.png" }
         ],
         technologies: ["HTML5", "CSS3", "JavaScript", "Supabase"]
     },
     {
         id: 2,
         title: "Cafetín Central",
+        url: "Vista/cafetin-central.html",
         description: "Aplicación web completa para la gestión de menú digital, caja registradora y panel administrativo.",
         media: [
-            { type: "image", url: "assets/img/cafetin-1.png" },
-            { type: "image", url: "assets/img/cafetin-2.png" } // Segunda imagen para el slider del modal
+            { type: "image", url: "assets/img/cafetin-1.png" }
         ],
         technologies: ["HTML5", "CSS3", "JavaScript"]
     },
     {
         id: 3,
         title: "MascaTinder",
+        url: "Vista/mascatinder.html",
         description: "Plataforma de conexión social orientada a mascotas con interfaz en modo oscuro interactiva.",
         media: [
             { type: "image", url: "assets/img/mascatinder-1.png" }
@@ -46,11 +33,12 @@ const projectsData = [
     {
         id: 4,
         title: "Campus Virtual - Dashboard Administrativo",
+        url: "Vista/campus-virtual.html",
         description: "Módulo de administración CRUD con filtros dinámicos en tiempo real y tablas optimizadas.",
         media: [
             { type: "image", url: "assets/img/admin-system.png" }
         ],
-        technologies: ["PHP", "MVC", "JavaScript","HTML5", "CSS3", "MySQL", "MySQLi", "PhpMyAdmin", "Ajax", "jQuery", "XAMPP"]
+        technologies: ["PHP", "MVC", "JavaScript", "HTML5", "CSS3", "MySQL", "MySQLi", "PhpMyAdmin", "Ajax", "jQuery", "XAMPP"]
     }
 ];
 
@@ -90,7 +78,11 @@ function renderProjects(page) {
             </div>
         `;
 
-        card.addEventListener("click", () => openModal(project));
+        // Redirección directa a la vista HTML correspondiente
+        card.addEventListener("click", () => {
+            window.location.href = project.url;
+        });
+
         projectsContainer.appendChild(card);
     });
 
@@ -116,61 +108,6 @@ function renderPagination() {
         paginationContainer.appendChild(btn);
     }
 }
-
-// Lógica del Modal / Visor de Proyecto
-const modal = document.getElementById("project-modal");
-const closeModal = document.querySelector(".close-modal");
-const mediaViewer = document.getElementById("media-viewer");
-const modalTitle = document.getElementById("modal-title");
-const modalDescription = document.getElementById("modal-description");
-const modalTech = document.getElementById("modal-tech");
-const mediaCounter = document.getElementById("media-counter");
-const prevBtn = document.getElementById("prev-media");
-const nextBtn = document.getElementById("next-media");
-
-let currentMediaIndex = 0;
-let currentProjectMedia = [];
-
-function openModal(project) {
-    currentProjectMedia = project.media;
-    currentMediaIndex = 0;
-
-    modalTitle.innerText = project.title;
-    
-    modalDescription.innerHTML = project.description; 
-    
-    modalTech.innerHTML = project.technologies.map(t => `<span class="tech-tag">${t}</span>`).join("");
-
-    updateMediaDisplay();
-    modal.style.display = "flex";
-}
-
-function updateMediaDisplay() {
-    const item = currentProjectMedia[currentMediaIndex];
-    if (item.type === "image") {
-        mediaViewer.innerHTML = `<img src="${item.url}" alt="Project Media">`;
-    } else {
-        mediaViewer.innerHTML = `<video src="${item.url}" controls autoplay></video>`;
-    }
-    mediaCounter.innerText = `${currentMediaIndex + 1} / ${currentProjectMedia.length}`;
-}
-
-prevBtn.addEventListener("click", () => {
-    if (currentMediaIndex > 0) {
-        currentMediaIndex--;
-        updateMediaDisplay();
-    }
-});
-
-nextBtn.addEventListener("click", () => {
-    if (currentMediaIndex < currentProjectMedia.length - 1) {
-        currentMediaIndex++;
-        updateMediaDisplay();
-    }
-});
-
-closeModal.addEventListener("click", () => modal.style.display = "none");
-window.addEventListener("click", (e) => { if (e.target === modal) modal.style.display = "none"; });
 
 // Switch Dark/Light Mode
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');

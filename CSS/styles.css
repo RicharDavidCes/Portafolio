@@ -169,7 +169,7 @@ input:checked + .slider.round:before {
     margin-bottom: 2rem;
 }
 
-/* Efeclos Hover en Tarjetas */
+/* Efectos Hover en Tarjetas */
 .hover-effect {
     transition: var(--transition);
     border-radius: 12px;
@@ -331,7 +331,6 @@ input:checked + .slider.round:before {
     cursor: pointer;
 }
 
-/* Efecto hover dinámico por tecnología */
 .skill-badge:hover {
     border-color: var(--hover-color);
     color: var(--hover-color);
@@ -435,95 +434,6 @@ input:checked + .slider.round:before {
     color: var(--text-heading);
 }
 
-/* Modal / Lightbox */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
-    z-index: 2000;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
-}
-
-.modal-content {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    max-width: 800px;
-    width: 100%;
-    max-height: 90vh; /* Controla que el modal no supere el alto de la pantalla */
-    overflow-y: auto;  /* Permite scroll vertical si el texto es muy largo */
-    position: relative;
-    padding: 2.5rem 2rem 2rem;
-    color: var(--text-color);
-}
-
-.close-modal {
-    position: absolute;
-    top: 0.8rem; 
-    right: 1.2rem;
-    font-size: 2rem;
-    cursor: pointer;
-    color: var(--text-color);
-    z-index: 10; /* Asegura que el botón X siempre quede por encima */
-    line-height: 1;
-    transition: var(--transition);
-}
-
-.close-modal:hover {
-    color: var(--accent-blue);
-}
-
-.media-container {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-/* Fija la altura del marco de medios para evitar saltos en la interfaz */
-#media-viewer {
-    width: 100%;
-    height: 320px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-#media-viewer img, #media-viewer video {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* Ajusta la imagen dentro del contenedor sin deformarla */
-}
-
-.media-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 0.8rem;
-}
-
-.btn-media {
-    background-color: var(--border-color);
-    color: var(--text-heading);
-    border: none;
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.btn-media:hover {
-    background-color: var(--accent-blue);
-    color: #fff;
-}
-
 .tech-tag {
     display: inline-block;
     background-color: rgba(47, 129, 247, 0.15);
@@ -548,8 +458,8 @@ input:checked + .slider.round:before {
 .card-icon.logo-institution img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Mantiene la proporción del logo sin deformarlo */
-    filter: drop-shadow(0px 2px 4px var(--shadow-color)); /* Sombra suave para destacar sobre el fondo */
+    object-fit: contain;
+    filter: drop-shadow(0px 2px 4px var(--shadow-color));
 }
 
 footer {

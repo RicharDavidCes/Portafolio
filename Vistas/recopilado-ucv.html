@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recopilado de Información UCV | Proyecto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/project-detail.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <a href="../index.html" style="text-decoration: none; color: inherit;"><span>&lt;RC /&gt;</span></a>
+        </div>
+        <nav>
+            <a href="../index.html#projects" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Volver a Proyectos</a>
+        </nav>
+    </header>
+
+    <main class="project-detail-container">
+        
+        <!-- 1. Título del Proyecto -->
+        <header class="project-header">
+            <h1 class="project-title">Recopilado de Información UCV</h1>
+            <p class="project-subtitle">Plataforma web para centralización de recursos académicos por semestre.</p>
+        </header>
+
+        <!-- 2. Galería de Imágenes (Tamaño Fijo + Selector de Miniaturas) -->
+        <section class="gallery-section">
+            <!-- Un solo elemento <img> activo para el visor principal -->
+            <div class="main-display">
+                <img id="active-image" src="../Imagenes/recopilado1.png" alt="Vista previa principal">
+            </div>
+            
+            <!-- Agregas todas tus imágenes como miniaturas aquí -->
+            <div class="thumbnail-bar">
+                <img src="../Imagenes/recopilado1.png" alt="Captura 1" class="thumb active" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado2.png" alt="Captura 2" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado3.png" alt="Captura 3" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado4.png" alt="Captura 3" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado5.png" alt="Captura 3" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado6.png" alt="Captura 3" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado7.png" alt="Captura 3" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado8.png" alt="Captura 3" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado9.png" alt="Captura 3" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado10.png" alt="Captura 3" class="thumb" onclick="changeImage(this)">
+            </div>
+        </section>
+
+        <!-- 3. Tags / Tecnologías / Arquitecturas -->
+        <section class="detail-block">
+            <h2><i class="fas fa-tags"></i> Stack & Tecnologías Utilizadas</h2>
+            <div class="tags-container">
+                <span class="tag-badge"><i class="fab fa-html5"></i> HTML5</span>
+                <span class="tag-badge"><i class="fab fa-css3-alt"></i> CSS3</span>
+                <span class="tag-badge"><i class="fab fa-js"></i> JavaScript</span>
+                <span class="tag-badge"><i class="fas fa-bolt"></i> Supabase</span>
+                <span class="tag-badge"><i class="fas fa-sitemap"></i> Arquitectura MVC</span>
+                <span class="tag-badge"><i class="fas fa-database"></i> Base de Datos Relacional</span>
+            </div>
+        </section>
+
+        <!-- 4. Descripción del Proyecto -->
+        <section class="detail-block">
+            <h2><i class="fas fa-align-left"></i> Descripción del Proyecto</h2>
+            <div class="project-description">
+                <p>
+                    Esta herramienta fue desarrollada para facilitar a los estudiantes el acceso organizado a guías, problemarios y parciales resueltos estructurados por semestres y materias.
+                </p>
+                <p>
+                    Su diseño prioriza el rendimiento, permitiendo filtrados rápidos y una consulta fluida de los recursos almacenados en la nube.
+                </p>
+                <p>
+                    Plataforma web interactiva para buscar material de estudio por semestres académicos y materias.
+                    <br>Cuenta con:
+                    <br><br>• Chat Bot integrado
+                    <br>• Barra de búsqueda
+                    <br>• Diseño Responsive
+                    <br>• Página 404
+                    <br>• Apartado Administrativo
+                </p>
+            </div>
+        </section>
+
+        <!-- 5. Anexo de Animaciones y Videos -->
+        <section class="detail-block">
+            <h2><i class="fas fa-film"></i> Demostración & Animaciones</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <h3>Navegación y Filtros</h3>
+                    <div class="video-wrapper">
+                        <video controls poster="../assets/img/video-poster1.jpg">
+                            <source src="../assets/videos/demo-navegacion.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Richard Cespedes. Guarenas, Miranda, Venezuela.</p>
+    </footer>
+
+    <script>
+        function changeImage(element) {
+            document.getElementById('active-image').src = element.src;
+            document.querySelectorAll('.thumb').forEach(thumb => thumb.classList.remove('active'));
+            element.classList.add('active');
+        }
+    </script>
+</body>
+</html>
