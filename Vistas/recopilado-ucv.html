@@ -27,25 +27,33 @@
             <p class="project-subtitle">Plataforma web para centralización de recursos académicos por semestre.</p>
         </header>
 
-        <!-- 2. Galería de Imágenes (Tamaño Fijo + Selector de Miniaturas) -->
+        <!-- 2. Galería de Imágenes -->
         <section class="gallery-section">
-            <!-- Un solo elemento <img> activo para el visor principal -->
             <div class="main-display">
-                <img id="active-image" src="../Imagenes/recopilado1.png" alt="Vista previa principal">
+                <!-- Botón Izquierdo -->
+                <button class="nav-btn prev-btn" onclick="navigateGallery(-1)" aria-label="Imagen anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <img id="active-image" src="../Imagenes/recopilado1.png" alt="Vista previa principal" class="zoomable-img" onclick="openModal()">
+
+                <!-- Botón Derecho -->
+                <button class="nav-btn next-btn" onclick="navigateGallery(1)" aria-label="Siguiente imagen">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
             
-            <!-- Agregas todas tus imágenes como miniaturas aquí -->
             <div class="thumbnail-bar">
                 <img src="../Imagenes/recopilado1.png" alt="Captura 1" class="thumb active" onclick="changeImage(this)">
                 <img src="../Imagenes/recopilado2.png" alt="Captura 2" class="thumb" onclick="changeImage(this)">
                 <img src="../Imagenes/recopilado3.png" alt="Captura 3" class="thumb" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado4.png" alt="Captura 3" class="thumb" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado5.png" alt="Captura 3" class="thumb" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado6.png" alt="Captura 3" class="thumb" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado7.png" alt="Captura 3" class="thumb" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado8.png" alt="Captura 3" class="thumb" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado9.png" alt="Captura 3" class="thumb" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado10.png" alt="Captura 3" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado4.png" alt="Captura 4" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado5.png" alt="Captura 5" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado6.png" alt="Captura 6" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado7.png" alt="Captura 7" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado8.png" alt="Captura 8" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado9.png" alt="Captura 9" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado10.png" alt="Captura 10" class="thumb" onclick="changeImage(this)">
             </div>
         </section>
 
@@ -100,6 +108,22 @@
 
     </main>
 
+
+    <!-- Modal Lightbox en Pantalla Completa con Flechas -->
+    <div id="image-modal" class="image-modal" onclick="closeModal(event)">
+        <span class="close-modal">&times;</span>
+        
+        <button class="modal-nav-btn modal-prev-btn" onclick="navigateGallery(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        
+        <img class="modal-content" id="modal-img" alt="Imagen ampliada">
+        
+        <button class="modal-nav-btn modal-next-btn" onclick="navigateGallery(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
     <footer>
         <p>&copy; 2026 Richard Cespedes. Guarenas, Miranda, Venezuela.</p>
     </footer>
@@ -111,5 +135,77 @@
             element.classList.add('active');
         }
     </script>
+
+<script>
+    // 1. Cambia la imagen activa al hacer clic en una miniatura
+    function changeImage(element) {
+        document.getElementById('active-image').src = element.src;
+        document.querySelectorAll('.thumb').forEach(thumb => thumb.classList.remove('active'));
+        element.classList.add('active');
+        
+        // Si el modal está abierto, actualizamos también la imagen ampliada
+        const modalImg = document.getElementById('modal-img');
+        if (modalImg) {
+            modalImg.src = element.src;
+        }
+    }
+
+    // 2. Abrir el modal
+    function openModal() {
+        const activeImg = document.getElementById('active-image');
+        const modal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('modal-img');
+        
+        modalImg.src = activeImg.src;
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // 3. Cerrar el modal
+    function closeModal(event) {
+        // Si hace clic en los botones de navegación del modal, no se cierra
+        if (event.target.closest('.modal-nav-btn')) return;
+
+        if (event.target.id === 'image-modal' || event.target.classList.contains('close-modal')) {
+            const modal = document.getElementById('image-modal');
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    // 4. Funciones auxiliares para navegar (Siguiente / Anterior)
+    function navigateGallery(direction) {
+        const thumbs = Array.from(document.querySelectorAll('.thumb'));
+        if (thumbs.length === 0) return;
+
+        const currentIndex = thumbs.findIndex(thumb => thumb.classList.contains('active'));
+        let newIndex = currentIndex + direction;
+
+        // Bucle infinito: si pasa de la última vuelve a la primera y viceversa
+        if (newIndex >= thumbs.length) newIndex = 0;
+        if (newIndex < 0) newIndex = thumbs.length - 1;
+
+        changeImage(thumbs[newIndex]);
+        
+        // Asegura que la miniatura seleccionada haga scroll automático si no es visible
+        thumbs[newIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+    }
+
+    // 5. Oyente global para eventos del teclado (Escape, Flecha Izquierda, Flecha Derecha)
+    document.addEventListener('keydown', function(event) {
+        const modal = document.getElementById('image-modal');
+        const isModalOpen = modal && modal.classList.contains('show');
+
+        if (event.key === 'ArrowRight') {
+            navigateGallery(1); // Siguiente imagen
+        } else if (event.key === 'ArrowLeft') {
+            navigateGallery(-1); // Imagen anterior
+        } else if (event.key === 'Escape' && isModalOpen) {
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+    });
+</script>
+
 </body>
 </html>
