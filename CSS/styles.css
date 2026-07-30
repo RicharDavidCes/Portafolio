@@ -141,7 +141,7 @@ input:checked + .slider.round:before {
 
 /* General Layout */
 .section {
-    padding: 6rem 8% 4rem;
+    padding: 6rem 8% 0rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -183,7 +183,7 @@ input:checked + .slider.round:before {
 
 /* Hero */
 .hero-section {
-    min-height: 90vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
 }
@@ -218,10 +218,12 @@ input:checked + .slider.round:before {
 .bio {
     margin-bottom: 2rem;
     max-width: 600px;
+    text-align: justify;
 }
 
 .hero-buttons {
     display: flex;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -478,4 +480,10 @@ footer {
     .nav-links {
         display: none;
     }
+    .hero-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
 }
