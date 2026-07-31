@@ -11,7 +11,7 @@ const projectsData = [
         technologies: ["HTML5", "CSS3", "JavaScript", "Supabase"]
     },
     {
-        id: 4,
+        id: 2,
         title: "Campus Virtual - Dashboard Administrativo",
         url: "Vistas/campus-virtual.html",
         description: "Módulo de administración CRUD con filtros dinámicos en tiempo real. Para manejo academico a nivel secundario",
@@ -21,7 +21,7 @@ const projectsData = [
         technologies: ["PHP", "MVC", "JavaScript", "HTML5", "CSS3", "MySQL", "MySQLi", "PhpMyAdmin", "Ajax", "jQuery", "XAMPP"]
     },
     {
-        id: 2,
+        id: 3,
         title: "Cafetín Central",
         url: "Vistas/cafetin-central.html",
         description: "Aplicación web completa para la gestión de menú digital, caja registradora y panel administrativo.",
@@ -31,12 +31,12 @@ const projectsData = [
         technologies: ["HTML5", "CSS3", "JavaScript"]
     },
     {
-        id: 3,
+        id: 4,
         title: "MascaTinder",
         url: "Vistas/mascatinder.html",
-        description: "Plataforma de conexión social orientada a mascotas con interfaz en modo oscuro interactiva.",
+        description: "Plataforma de conexión social orientada a un canal de Whatsapp de estudiantes de la UCV.",
         media: [
-            { type: "image", url: "assets/img/mascatinder-1.png" }
+            { type: "image", url: "Imagenes/mascatinder1.png" }
         ],
         technologies: ["HTML5", "CSS3", "JavaScript", "Supabase"]
     }    

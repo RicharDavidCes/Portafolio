@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MascaTinder | Proyecto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/project-detail.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <a href="../index.html" style="text-decoration: none; color: inherit;"><span>&lt;RC /&gt;</span></a>
+        </div>
+        <nav>
+            <a href="../index.html#projects" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Volver a Proyectos</a>
+        </nav>
+    </header>
+
+    <main class="project-detail-container">
+        
+        <!-- 1. Título del Proyecto -->
+        <header class="project-header">
+            <h1 class="project-title">MascaTinder</h1>
+            <p class="project-subtitle">Plataforma de interacción y conexión social vinculada a la comunidad estudiantil de la UCV</p>
+        </header>
+
+        <!-- 2. Galería de Imágenes -->
+        <section class="gallery-section">
+            <div class="main-display">
+                <button class="nav-btn prev-btn" onclick="navigateGallery(-1)" aria-label="Imagen anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <img id="active-image" src="../Imagenes/mascatinder1.png" alt="Vista previa principal" class="zoomable-img" onclick="openModal()">
+
+                <button class="nav-btn next-btn" onclick="navigateGallery(1)" aria-label="Siguiente imagen">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <div class="thumbnail-bar">
+                <img src="../Imagenes/mascatinder1.png" alt="Captura 1" class="thumb active" onclick="changeImage(this)">
+                <img src="../Imagenes/mascatinder2.png" alt="Captura 2" class="thumb active" onclick="changeImage(this)">
+                <img src="../Imagenes/mascatinder3.png" alt="Captura 3" class="thumb active" onclick="changeImage(this)">
+                <img src="../Imagenes/mascatinder4.png" alt="Captura 4" class="thumb active" onclick="changeImage(this)">
+                <img src="../Imagenes/mascatinder5.png" alt="Captura 5" class="thumb active" onclick="changeImage(this)">
+                <img src="../Imagenes/mascatinder6.png" alt="Captura 6" class="thumb active" onclick="changeImage(this)">
+                <img src="../Imagenes/mascatinder7.png" alt="Captura 7" class="thumb active" onclick="changeImage(this)">
+                <img src="../Imagenes/mascatinder8.png" alt="Captura 8" class="thumb active" onclick="changeImage(this)">
+                <img src="../Imagenes/mascatinder9.png" alt="Captura 9" class="thumb active" onclick="changeImage(this)">
+                <img src="../Imagenes/mascatinder10.png" alt="Captura 10" class="thumb active" onclick="changeImage(this)">
+                <img src="../Imagenes/mascatinder11.png" alt="Captura 11" class="thumb active" onclick="changeImage(this)">
+                <img src="../Imagenes/mascatinder12.png" alt="Captura 12" class="thumb active" onclick="changeImage(this)">
+            </div>
+        </section>
+
+        <!-- 3. Stack & Tecnologías -->
+        <section class="detail-block">
+            <h2><i class="fas fa-tags"></i> Stack & Tecnologías Utilizadas</h2>
+            <div class="tags-container">
+                <span class="tag-badge"><i class="fab fa-html5"></i> HTML5</span>
+                <span class="tag-badge"><i class="fab fa-css3-alt"></i> CSS3</span>
+                <span class="tag-badge"><i class="fab fa-js"></i> JavaScript</span>
+                <span class="tag-badge"><i class="fas fa-database"></i> Supabase</span>
+            </div>
+        </section>
+
+        <!-- 4. Descripción del Proyecto -->
+        <section class="detail-block">
+            <h2><i class="fas fa-align-left"></i> Descripción del Proyecto</h2>
+            <div class="project-description">
+                <p>
+                    <strong>MascaTinder</strong> es una aplicación web interactiva desarrollada para dinamizar la interacción social entre los miembros del canal humorístico "www.Losmascapipes.UCV". La plataforma actúa como un punto de encuentro digital que facilita la publicación, exploración y conexión entre perfiles de forma rápida y moderna.
+                </p>
+                <p>
+                    El desarrollo utiliza <strong>Supabase</strong> como Backend-as-a-Service (BaaS) para la gestión del almacenamiento de archivos, autenticación y persistencia de datos, junto con una interfaz liviana construida en Vanilla JavaScript.
+                </p>
+                <p><strong>Módulos Claves & Características:</strong></p>
+                <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
+                    <li>
+                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <strong>Integración con Supabase:</strong> Base de datos relacional para el registro interactivo de publicaciones y la gestión centralizada de perfiles.
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <strong>Chat en Tiempo Real:</strong> Implementación de suscripciones de Supabase para permitir mensajería instantánea y fluida entre usuarios.
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <strong>Autenticación & Recuperación de Cuenta:</strong> Flujo seguro de gestión de usuarios con recuperación de credenciales mediante correo electrónico.
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <strong>Feed de Tarjetas Interactivas:</strong> Sistema dinámico para la navegación y visualización de perfiles procesado desde el cliente con JavaScript.
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <strong>Diseño Adaptativo & Moderno:</strong> Interfaz con estética de aplicación móvil, completamente optimizada para cualquier pantalla.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal Lightbox Ampliado -->
+    <div id="image-modal" class="image-modal" onclick="closeModal(event)">
+        <span class="close-modal">&times;</span>
+        
+        <button class="modal-nav-btn modal-prev-btn" onclick="navigateGallery(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        
+        <img class="modal-content" id="modal-img" alt="Imagen ampliada">
+        
+        <button class="modal-nav-btn modal-next-btn" onclick="navigateGallery(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Richard Cespedes. Guarenas, Miranda, Venezuela.</p>
+    </footer>
+
+    <script>
+        function changeImage(element) {
+            document.getElementById('active-image').src = element.src;
+            document.querySelectorAll('.thumb').forEach(thumb => thumb.classList.remove('active'));
+            element.classList.add('active');
+            
+            const modalImg = document.getElementById('modal-img');
+            if (modalImg) {
+                modalImg.src = element.src;
+            }
+        }
+
+        function openModal() {
+            const activeImg = document.getElementById('active-image');
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-img');
+            
+            modalImg.src = activeImg.src;
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(event) {
+            if (event.target.closest('.modal-nav-btn')) return;
+
+            if (event.target.id === 'image-modal' || event.target.classList.contains('close-modal')) {
+                const modal = document.getElementById('image-modal');
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function navigateGallery(direction) {
+            const thumbs = Array.from(document.querySelectorAll('.thumb'));
+            if (thumbs.length === 0) return;
+
+            const currentIndex = thumbs.findIndex(thumb => thumb.classList.contains('active'));
+            let newIndex = currentIndex + direction;
+
+            if (newIndex >= thumbs.length) newIndex = 0;
+            if (newIndex < 0) newIndex = thumbs.length - 1;
+
+            changeImage(thumbs[newIndex]);
+            thumbs[newIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+        }
+
+        document.addEventListener('keydown', function(event) {
+            const modal = document.getElementById('image-modal');
+            const isModalOpen = modal && modal.classList.contains('show');
+
+            if (event.key === 'ArrowRight') {
+                navigateGallery(1);
+            } else if (event.key === 'ArrowLeft') {
+                navigateGallery(-1);
+            } else if (event.key === 'Escape' && isModalOpen) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+
+</body>
+</html>
