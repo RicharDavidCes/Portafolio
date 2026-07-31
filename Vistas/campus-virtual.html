@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recopilado de Información UCV | Proyecto</title>
+    <title>Campus Virtual | Proyecto</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="stylesheet" href="../CSS/project-detail.css">
@@ -23,8 +23,8 @@
         
         <!-- 1. Título del Proyecto -->
         <header class="project-header">
-            <h1 class="project-title">Recopilado de Información UCV</h1>
-            <p class="project-subtitle">Plataforma web para centralización de recursos académicos por semestre.</p>
+            <h1 class="project-title">Campus Virtual - Dashboard Administrativo</h1>
+            <p class="project-subtitle">Módulo de administración para manejo academico a nivel secundario</p>
         </header>
 
         <!-- 2. Galería de Imágenes -->
@@ -35,7 +35,7 @@
                     <i class="fas fa-chevron-left"></i>
                 </button>
 
-                <img id="active-image" src="../Imagenes/recopilado1.png" alt="Vista previa principal" class="zoomable-img" onclick="openModal()">
+                <img id="active-image" src="../Imagenes/campus-virtual1.png" alt="Vista previa principal" class="zoomable-img" onclick="openModal()">
 
                 <!-- Botón Derecho -->
                 <button class="nav-btn next-btn" onclick="navigateGallery(1)" aria-label="Siguiente imagen">
@@ -44,16 +44,15 @@
             </div>
             
             <div class="thumbnail-bar">
-                <img src="../Imagenes/recopilado1.png" alt="Captura 1" class="thumb active" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado2.png" alt="Captura 2" class="thumb" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado3.png" alt="Captura 3" class="thumb" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado4.png" alt="Captura 4" class="thumb" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado5.png" alt="Captura 5" class="thumb" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado6.png" alt="Captura 6" class="thumb" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado7.png" alt="Captura 7" class="thumb" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado8.png" alt="Captura 8" class="thumb" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado9.png" alt="Captura 9" class="thumb" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado10.png" alt="Captura 10" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/campus-virtual1.png" alt="Captura 1" class="thumb active" onclick="changeImage(this)">
+                <img src="../Imagenes/campus-virtual2.png" alt="Captura 2" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/campus-virtual3.png" alt="Captura 3" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/campus-virtual4.png" alt="Captura 4" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/campus-virtual5.png" alt="Captura 5" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/campus-virtual6.png" alt="Captura 6" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/campus-virtual7.png" alt="Captura 7" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/campus-virtual8.png" alt="Captura 8" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/campus-virtual9.png" alt="Captura 9" class="thumb" onclick="changeImage(this)">
             </div>
         </section>
 
@@ -61,10 +60,17 @@
         <section class="detail-block">
             <h2><i class="fas fa-tags"></i> Stack & Tecnologías Utilizadas</h2>
             <div class="tags-container">
+                <span class="tag-badge"><i class="fab fa-php"></i> PHP</span>
+                <span class="tag-badge"><i class="fas fa-sitemap"></i> MVC</span>
+                <span class="tag-badge"><i class="fab fa-js"></i> JavaScript</span>
                 <span class="tag-badge"><i class="fab fa-html5"></i> HTML5</span>
                 <span class="tag-badge"><i class="fab fa-css3-alt"></i> CSS3</span>
-                <span class="tag-badge"><i class="fab fa-js"></i> JavaScript</span>
-                <span class="tag-badge"><i class="fas fa-bolt"></i> Supabase</span>
+                <span class="tag-badge"><i class="fas fa-database"></i> MySQL</span>
+                <span class="tag-badge"><i class="fas fa-server"></i> MySQLi</span>
+                <span class="tag-badge"><i class="fas fa-network-wired"></i> PhpMyAdmin</span>
+                <span class="tag-badge"><i class="fas fa-exchange-alt"></i> Ajax</span>
+                <span class="tag-badge"><i class="fas fa-cube"></i> jQuery</span>
+                <span class="tag-badge"><i class="fas fa-desktop"></i> XAMPP</span>
             </div>
         </section>
 
@@ -73,30 +79,17 @@
             <h2><i class="fas fa-align-left"></i> Descripción del Proyecto</h2>
             <div class="project-description">
                 <p>
-                    Esta herramienta fue desarrollada para facilitar a los estudiantes el acceso organizado a guías, problemarios y parciales resueltos estructurados por semestres académicos y materias. Su diseño prioriza el rendimiento, permitiendo filtrados rápidos y una consulta fluida de los recursos almacenados en la nube.
+                    <strong>Campus Virtual</strong> es un sistema de gestión educativa diseñado para optimizar la administración académica y el control institucional a nivel secundario. La plataforma centraliza el flujo de información entre docentes, estudiantes y administradores en una interfaz ágil e intuitiva.
                 </p>
-                <p><strong>Módulos Claves & Características:</strong></p>
+                <p>
+                    El sistema está construido bajo la arquitectura <strong>MVC</strong>, garantizando una separación clara entre la lógica de negocio y la interfaz. A través de peticiones asíncronas con <strong>AJAX</strong> y la integración de <strong>MySQL</strong>, ofrece filtrados en tiempo real y operaciones CRUD sin recargas de página.
+                </p>
+                <p><strong>Módulos y Características Clave:</strong></p>
                 <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
-                    <li>
-                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
-                        <strong>Asistente Virtual (Chatbot):</strong> Módulo integrado para orientar al estudiante resolviendo dudas sobre los diversos materiales en la web y personales de sus materias.
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
-                        <strong>Búsqueda & Filtros Dinámicos:</strong> Barra de búsqueda optimizada para la localización rápida materias .
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
-                        <strong>Diseño Adaptativo (Responsive):</strong> Interfaz totalmente fluida y accesible desde cualquier tipo de dispositivo móvil o de escritorio.
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
-                        <strong>Control de Navegación (Página 404):</strong> Manejo de errores de ruta con una vista personalizada para guiar al usuario de vuelta.
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
-                        <strong>Panel Administrativo:</strong> Módulo interno para la gestión, actualización y carga ágil del material académico.
-                    </li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i><strong>Panel Administrativo:</strong> Gestión completa de usuarios, matrículas y registros académicos.</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i><strong>Búsqueda & Filtros Dinámicos:</strong> Consulta instantánea de registros y recursos.</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i><strong>Diseño Adaptive & Responsive:</strong> Interfaz optimizada para cualquier tamaño de pantalla.</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i><strong>Manejo de Errores:</strong> Sistema robusto que maneja errores de cualquier tipo en las entradas resistente ante las inyecciones sql y rollbacks en tablas cuando se realizan ingresos multiples enlazados.</li>
                 </ul>
             </div>
         </section>

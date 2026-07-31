@@ -11,9 +11,19 @@ const projectsData = [
         technologies: ["HTML5", "CSS3", "JavaScript", "Supabase"]
     },
     {
+        id: 4,
+        title: "Campus Virtual - Dashboard Administrativo",
+        url: "Vistas/campus-virtual.html",
+        description: "Módulo de administración CRUD con filtros dinámicos en tiempo real. Para manejo academico a nivel secundario",
+        media: [
+            { type: "image", url: "Imagenes/campus-virtual1.png" }
+        ],
+        technologies: ["PHP", "MVC", "JavaScript", "HTML5", "CSS3", "MySQL", "MySQLi", "PhpMyAdmin", "Ajax", "jQuery", "XAMPP"]
+    },
+    {
         id: 2,
         title: "Cafetín Central",
-        url: "Vista/cafetin-central.html",
+        url: "Vistas/cafetin-central.html",
         description: "Aplicación web completa para la gestión de menú digital, caja registradora y panel administrativo.",
         media: [
             { type: "image", url: "assets/img/cafetin-1.png" }
@@ -23,23 +33,13 @@ const projectsData = [
     {
         id: 3,
         title: "MascaTinder",
-        url: "Vista/mascatinder.html",
+        url: "Vistas/mascatinder.html",
         description: "Plataforma de conexión social orientada a mascotas con interfaz en modo oscuro interactiva.",
         media: [
             { type: "image", url: "assets/img/mascatinder-1.png" }
         ],
         technologies: ["HTML5", "CSS3", "JavaScript", "Supabase"]
-    },    
-    {
-        id: 4,
-        title: "Campus Virtual - Dashboard Administrativo",
-        url: "Vista/campus-virtual.html",
-        description: "Módulo de administración CRUD con filtros dinámicos en tiempo real y tablas optimizadas.",
-        media: [
-            { type: "image", url: "assets/img/admin-system.png" }
-        ],
-        technologies: ["PHP", "MVC", "JavaScript", "HTML5", "CSS3", "MySQL", "MySQLi", "PhpMyAdmin", "Ajax", "jQuery", "XAMPP"]
-    }
+    }    
 ];
 
 // Configuración de Paginación

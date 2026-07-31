@@ -1,0 +1,68 @@
+/* Layout Centrado */
+.error-container {
+    min-height: calc(100vh - 140px); /* Ocupa casi toda la pantalla restando nav y footer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.error-content {
+    max-width: 600px;
+}
+
+/* Número 404 Estilizado */
+.error-code {
+    font-size: clamp(6rem, 15vw, 10rem);
+    font-weight: 800;
+    line-height: 1;
+    color: var(--text-color, #ffffff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.pulse-icon {
+    color: var(--accent-color, #2f81f7);
+    animation: floatBug 3s ease-in-out infinite;
+}
+
+.pulse-icon i {
+    font-size: 0.8em;
+}
+
+/* Títulos y Descripciones */
+.error-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.error-description {
+    color: var(--text-muted, #a0aec0);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Contenedor de Botones */
+.error-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Animación sutil flotante para el icono central */
+@keyframes floatBug {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-10px) scale(1.05);
+        color: #0099ff;
+    }
+}
