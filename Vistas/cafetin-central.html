@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetín Central | Proyecto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/project-detail.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <a href="../index.html" style="text-decoration: none; color: inherit;"><span>&lt;RC /&gt;</span></a>
+        </div>
+        <nav>
+            <a href="../index.html#projects" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Volver a Proyectos</a>
+        </nav>
+    </header>
+
+    <main class="project-detail-container">
+        
+        <!-- 1. Título del Proyecto -->
+        <header class="project-header">
+            <h1 class="project-title">Cafetín Central</h1>
+            <p class="project-subtitle">Aplicación web para gestión de menú digital, caja registradora y panel administrativo</p>
+        </header>
+
+        <!-- 2. Galería de Imágenes (cafetin1 a cafetin8) -->
+        <section class="gallery-section">
+            <div class="main-display">
+                <button class="nav-btn prev-btn" onclick="navigateGallery(-1)" aria-label="Imagen anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <img id="active-image" src="../Imagenes/cafetin1.png" alt="Vista previa principal" class="zoomable-img" onclick="openModal()">
+
+                <button class="nav-btn next-btn" onclick="navigateGallery(1)" aria-label="Siguiente imagen">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <div class="thumbnail-bar">
+                <img src="../Imagenes/cafetin1.png" alt="Captura 1" class="thumb active" onclick="changeImage(this)">
+                <img src="../Imagenes/cafetin2.png" alt="Captura 2" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/cafetin3.png" alt="Captura 3" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/cafetin4.png" alt="Captura 4" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/cafetin5.png" alt="Captura 5" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/cafetin6.png" alt="Captura 6" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/cafetin7.png" alt="Captura 7" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/cafetin8.png" alt="Captura 8" class="thumb" onclick="changeImage(this)">
+            </div>
+        </section>
+
+        <!-- 3. Stack & Tecnologías Real -->
+        <section class="detail-block">
+            <h2><i class="fas fa-tags"></i> Stack & Tecnologías Utilizadas</h2>
+            <div class="tags-container">
+                <span class="tag-badge"><i class="fab fa-html5"></i> HTML5</span>
+                <span class="tag-badge"><i class="fab fa-css3-alt"></i> CSS3</span>
+                <span class="tag-badge"><i class="fab fa-js"></i> JavaScript</span>
+            </div>
+        </section>
+
+        <!-- 4. Descripción del Proyecto -->
+        <section class="detail-block">
+            <h2><i class="fas fa-align-left"></i> Descripción del Proyecto</h2>
+            <div class="project-description">
+                <p>
+                    <strong>Cafetín Central</strong> es una aplicación web completa diseñada para optimizar la administración operativa y la atención comercial en el cafetinde la facultad de ciencias de la ucv. La interfaz permite interactuar dinámicamente con un menú digital, llevar el control del punto de venta y supervisar la información administrativa de manera intuitiva. Realizado como proyecto en la materia de Introducción a la informatica.
+                </p>
+                <p><strong>Módulos Claves & Características:</strong></p>
+                <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
+                    <li>
+                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <strong>Asistente Virtual (Chatbot):</strong> Módulo integrado para orientar al estudiante resolviendo dudas sobre el cafetin (horarios, precios y mas).
+                    </li>                    
+                    <li>
+                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <strong>Menú Digital Interactivo:</strong> Visualización fluida de los productos disponibles y sus categorías.
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <strong>Módulo de Caja Registradora:</strong> Herramienta para el cálculo y la simulación ágil de órdenes e importes.
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <strong>Panel Administrativo:</strong> Vista estructurada para la gestión y actualización del catálogo.
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <strong>Lógica en Cliente (Vanilla JS):</strong> Manejo del estado de la aplicación, interactividad de los componentes e interfaz responsiva directamente en el navegador.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 5. Anexo de Animaciones y Videos -->
+        <section class="detail-block">
+            <h2><i class="fas fa-film"></i> Demostración & Animaciones</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <h3>Navegación y Filtros</h3>
+                    <div class="video-wrapper">
+                        <video controls poster="../assets/img/video-poster1.jpg">
+                            <source src="../assets/videos/demo-navegacion.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal Lightbox Ampliado -->
+    <div id="image-modal" class="image-modal" onclick="closeModal(event)">
+        <span class="close-modal">&times;</span>
+        
+        <button class="modal-nav-btn modal-prev-btn" onclick="navigateGallery(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        
+        <img class="modal-content" id="modal-img" alt="Imagen ampliada">
+        
+        <button class="modal-nav-btn modal-next-btn" onclick="navigateGallery(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Richard Cespedes. Guarenas, Miranda, Venezuela.</p>
+    </footer>
+
+    <script>
+        function changeImage(element) {
+            document.getElementById('active-image').src = element.src;
+            document.querySelectorAll('.thumb').forEach(thumb => thumb.classList.remove('active'));
+            element.classList.add('active');
+            
+            const modalImg = document.getElementById('modal-img');
+            if (modalImg) {
+                modalImg.src = element.src;
+            }
+        }
+
+        function openModal() {
+            const activeImg = document.getElementById('active-image');
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-img');
+            
+            modalImg.src = activeImg.src;
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(event) {
+            if (event.target.closest('.modal-nav-btn')) return;
+
+            if (event.target.id === 'image-modal' || event.target.classList.contains('close-modal')) {
+                const modal = document.getElementById('image-modal');
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function navigateGallery(direction) {
+            const thumbs = Array.from(document.querySelectorAll('.thumb'));
+            if (thumbs.length === 0) return;
+
+            const currentIndex = thumbs.findIndex(thumb => thumb.classList.contains('active'));
+            let newIndex = currentIndex + direction;
+
+            if (newIndex >= thumbs.length) newIndex = 0;
+            if (newIndex < 0) newIndex = thumbs.length - 1;
+
+            changeImage(thumbs[newIndex]);
+            thumbs[newIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+        }
+
+        document.addEventListener('keydown', function(event) {
+            const modal = document.getElementById('image-modal');
+            const isModalOpen = modal && modal.classList.contains('show');
+
+            if (event.key === 'ArrowRight') {
+                navigateGallery(1);
+            } else if (event.key === 'ArrowLeft') {
+                navigateGallery(-1);
+            } else if (event.key === 'Escape' && isModalOpen) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+
+</body>
+</html>

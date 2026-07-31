@@ -26,7 +26,7 @@ const projectsData = [
         url: "Vistas/cafetin-central.html",
         description: "Aplicación web completa para la gestión de menú digital, caja registradora y panel administrativo.",
         media: [
-            { type: "image", url: "assets/img/cafetin-1.png" }
+            { type: "image", url: "Imagenes/cafetin-1.png" }
         ],
         technologies: ["HTML5", "CSS3", "JavaScript"]
     },
