@@ -39,7 +39,17 @@ const projectsData = [
             { type: "image", url: "Imagenes/mascatinder1.png" }
         ],
         technologies: ["HTML5", "CSS3", "JavaScript", "Supabase"]
-    }    
+    },
+    {
+        id: 5,
+        title: "Portafolio DevOdoru",
+        url: "Vistas/Portafolio-DevOdoru.html",
+        description: "plataforma web desarrollada a la medida para exhibir proyectos de desarrollo de videojuegos independientes.",
+        media: [
+            { type: "image", url: "Imagenes/devodoru1.png" }
+        ],
+        technologies: ["HTML5", "CSS3", "JavaScript", "Supabase"]
+    }        
 ];
 
 // Configuración de Paginación
