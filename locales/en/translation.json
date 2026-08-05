@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "about": "About Me",
+    "education": "Education",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "back_to_projects": "Back to Projects",
+    "lang_es": "Español",
+    "lang_en": "English"
+  },
+  "hero": {
+    "badge": "Computer Science Student",
+    "greeting": "Hello! I'm",
+    "bio": "Computer Science student at <strong>UCV</strong> and Full Stack developer. Passionate about understanding systems from their logical architecture to practical implementation. Specialized in structuring solutions using <strong>MVC</strong> architecture, relational databases, and functional UI design.",
+    "btn_contact": "Contact Me",
+    "btn_projects": "View Projects"
+  },
+  "education": {
+    "title": "Education & Training",
+    "ucv": {
+      "subtitle": "Bachelor's Degree in Computer Science",
+      "date": "2025 – Present",
+      "term": "2nd Semester",
+      "desc": "Solid theoretical foundations in algorithms, data structures, and computing logic."
+    },
+    "uneweb": {
+      "subtitle": "Full Stack Web Development Diploma",
+      "desc": "Specialization in full-stack web development, MVC architecture, and relational databases."
+    }
+  },
+  "skills": {
+    "title": "Technical Stack & Skills",
+    "languages": "Languages",
+    "backend": "Backend & Databases",
+    "tools": "Libraries, Tools & Architecture",
+    "mvc": "MVC Architecture",
+    "oop": "OOP"
+  },
+  "projects": {
+    "title": "Featured Projects"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have a project in mind or want to collaborate? Get in touch!",
+    "email": "Email"
+  },
+  "projects_data": {
+    "p1": {
+      "title": "UCV Information Hub",
+      "description": "Interactive web platform to search for study materials by academic semester and subjects."
+    },
+    "p2": {
+      "title": "Virtual Campus - Administrative Dashboard",
+      "description": "CRUD administration module with real-time dynamic filters for secondary school academic management."
+    },
+    "p3": {
+      "title": "Central Cafeteria",
+      "description": "Full web application for digital menu management, cash register, and administrative panel."
+    },
+    "p4": {
+      "title": "MascaTinder",
+      "description": "Social networking platform aimed at a WhatsApp channel for UCV students."
+    },
+    "p5": {
+      "title": "DevOdoru Portfolio",
+      "description": "Custom-built web platform to showcase independent video game development projects."
+    }
+  },
+  "detail": {
+    "stack_title": "Stack & Technologies Used",
+    "description_title": "Project Description",
+    "p1_intro": "This tool was developed to provide students with organized access to study guides, problem sets, and solved exams structured by academic semesters and subjects. Its design prioritizes performance, allowing fast filtering and seamless access to cloud-stored resources.",
+    "modules_title": "Key Modules & Features:",
+    "mod_chatbot": "<strong>Virtual Assistant (Chatbot):</strong> Integrated module to assist students by answering questions about web resources and course materials.",
+    "mod_search": "<strong>Dynamic Search & Filters:</strong> Optimized search bar for fast subject lookup.",
+    "mod_responsive": "<strong>Responsive Design:</strong> Fully fluid interface accessible from any mobile or desktop device.",
+    "mod_404": "<strong>Navigation Control (404 Page):</strong> Route error handling with a custom view to guide users back.",
+    "mod_admin": "<strong>Admin Panel:</strong> Internal module for agile management, updating, and uploading of academic materials.",
+    "demo_title": "Demo & Animations",
+    "video_nav": "Navigation and Filters"
+  }
+}

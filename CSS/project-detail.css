@@ -1,8 +1,37 @@
+/* ==========================================================================
+   VARIABLES DE TEMA (Modo Oscuro por defecto / Modo Claro vía data-theme)
+   ========================================================================== */
+:root {
+    --bg-color: #0d1117;
+    --card-bg: #161b22;
+    --border-color: #30363d;
+    --text-color: #c9d1d9;
+    --text-heading: #f0f6fc;
+    --accent-blue: #2f81f7;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --transition: all 0.3s ease;
+}
+
+[data-theme="light"] {
+    --bg-color: #ffffff;
+    --card-bg: #f6f8fa;
+    --border-color: #d0d7de;
+    --text-color: #57606a;
+    --text-heading: #24292f;
+    --accent-blue: #0969da;
+    --shadow-color: rgba(140, 149, 159, 0.2);
+}
+
+/* ==========================================================================
+   ESTILOS DE LA VISTA DE DETALLE DE PROYECTOS
+   ========================================================================== */
+
 /* Contenedor principal */
 .project-detail-container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 7rem 5% 4rem;
+    transition: var(--transition);
 }
 
 .project-header {
@@ -13,11 +42,13 @@
     font-size: 2.5rem;
     color: var(--text-heading);
     margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
 }
 
 .project-subtitle {
     font-size: 1.1rem;
     color: var(--accent-blue);
+    transition: color 0.3s ease;
 }
 
 /* --- Galería con Tamaño Fijo --- */
@@ -27,13 +58,15 @@
     border-radius: 12px;
     padding: 1rem;
     margin-bottom: 2.5rem;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    transition: var(--transition);
 }
 
 /* Marco principal rígido */
 .main-display {
     width: 100%;
     height: 480px; /* Alto fijo para evitar saltos de layout */
-    background-color: #000;
+    background-color: #000; /* Mantiene marco negro tipo cine para resaltar capturas */
     border-radius: 8px;
     overflow: hidden;
     display: flex;
@@ -45,7 +78,7 @@
 .main-display img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Mantiene la proporción de la imagen sin deformar ni estirar la caja */
+    object-fit: contain; /* Mantiene la proporción de la imagen sin deformar */
     transition: opacity 0.2s ease;
 }
 
@@ -70,11 +103,11 @@
     justify-content: center;
     cursor: pointer;
     z-index: 5;
-    transition: background 0.2s, transform 0.2s;
+    transition: background 0.2s, transform 0.2s, border-color 0.2s;
 }
 
 .nav-btn:hover {
-    background: var(--accent-blue, #2f81f7);
+    background: var(--accent-blue);
     border-color: transparent;
 }
 
@@ -149,7 +182,7 @@
     max-height: 90vh;
     border-radius: 8px;
     object-fit: contain;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
 }
 
 /* Botón de cerrar (X) */
@@ -166,7 +199,7 @@
 }
 
 .close-modal:hover {
-    color: var(--accent-blue, #2f81f7);
+    color: var(--accent-blue);
 }
 
 /* Botones flotantes dentro del Modal Lightbox */
@@ -208,6 +241,8 @@
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 1.8rem;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    transition: var(--transition);
 }
 
 .detail-block h2 {
@@ -217,10 +252,12 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: color 0.3s ease;
 }
 
 .detail-block h2 i {
     color: var(--accent-blue);
+    transition: color 0.3s ease;
 }
 
 /* Badges / Tags */
@@ -241,6 +278,7 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    transition: var(--transition);
 }
 
 /* Descripción */
@@ -248,6 +286,7 @@
     margin-bottom: 1rem;
     color: var(--text-color);
     line-height: 1.7;
+    transition: color 0.3s ease;
 }
 
 .project-description p:last-child {
@@ -265,6 +304,7 @@
     font-size: 1rem;
     margin-bottom: 0.5rem;
     color: var(--text-heading);
+    transition: color 0.3s ease;
 }
 
 .video-wrapper {
@@ -273,6 +313,7 @@
     overflow: hidden;
     background-color: #000;
     border: 1px solid var(--border-color);
+    transition: border-color 0.3s ease;
 }
 
 .video-wrapper video {
@@ -287,23 +328,22 @@
 }
 
 .credit-link {
-    color: #2f81f7;
+    color: var(--accent-blue);
     font-size: 0.9rem;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 6px; /* Espacio entre el texto y el icono */
+    gap: 6px;
     transition: color 0.2s ease;
 }
 
 .credit-icon {
-    font-size: 0.75rem; /* Un poco más pequeño que el texto para no distraer */
+    font-size: 0.75rem;
     opacity: 0.8;
 }
 
-/* Efecto al pasar el cursor */
 .credit-link:hover {
-    color: #ff3366; /* Cambia a un rosa neon o el color primario de tu tema */
+    color: #ff3366;
 }
 
 .credit-link:hover .credit-icon {
@@ -365,5 +405,61 @@
 
     .modal-next-btn {
         right: 8px;
+    }
+}
+
+/* ==========================================================================
+   AJUSTES RESPONSIVE DE LA BARRA DE NAVEGACIÓN (NAVBAR)
+   ========================================================================== */
+
+/* Ajustes para móviles y pantallas reducidas (≤ 576px) */
+@media (max-width: 576px) {
+    .navbar {
+        padding: 0.8rem 3% !important;
+        gap: 8px;
+    }
+
+    /* Reducir espacio entre los elementos de la derecha */
+    .header-actions {
+        gap: 8px !important;
+    }
+
+    /* Ocultar el texto del botón "Volver a Proyectos" y dejar solo el icono */
+    .nav-controls .btn-outline span[data-i18n="nav.back_to_projects"] {
+        display: none;
+    }
+
+    /* Hacer el botón de volver más compacto / tipo icono */
+    .nav-controls .btn-outline {
+        padding: 6px 10px !important;
+        font-size: 0.85rem;
+    }
+
+    /* Hacer el botón de idioma más compacto */
+    .lang-btn {
+        padding: 5px 10px !important;
+        font-size: 0.78rem !important;
+    }
+
+    /* Reducir ligeramente el switch de tema si es necesario */
+    .theme-switch-wrapper {
+        transform: scale(0.85);
+        transform-origin: center right;
+    }
+}
+
+/* Para pantallas extremas muy pequeñas (≤ 380px) */
+@media (max-width: 380px) {
+    .logo span {
+        font-size: 1.1rem;
+    }
+
+    /* Ocultar el texto del idioma en pantallas ultra estrechas, manteniendo el icono */
+    #lang-label {
+        display: none;
+    }
+
+    .lang-btn {
+        padding: 6px 8px !important;
     }
 }

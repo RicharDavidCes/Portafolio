@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Richard Cespedes | Portafolio</title>
     
+    <script src="./JavaScript/theme-head.js"></script>
+
     <!-- Hojas de Estilo -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
@@ -101,30 +103,40 @@
           ]
         }
     </script>
+
 </head>
 <body>
 
-    <header class="navbar">
+<header class="navbar">
         <div class="logo">
             <span>&lt;RC /&gt;</span>
         </div>
+
         <nav>
             <ul class="nav-links">
-                <li><a href="#about">Sobre Mí</a></li>
-                <li><a href="#education">Estudios</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#about" data-i18n="nav.about">Sobre Mí</a></li>
+                <li><a href="#education" data-i18n="nav.education">Estudios</a></li>
+                <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="#projects" data-i18n="nav.projects">Proyectos</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
             </ul>
         </nav>
-        <div class="theme-switch-wrapper">
-            <label class="theme-switch" for="checkbox" >
-                <input type="checkbox" id="checkbox" aria-label="Cambiar entre modo claro y modo oscuro"/>
-                <div class="slider round">
-                    <i class="fas fa-moon"></i>
-                    <i class="fas fa-sun"></i>
-                </div>
-            </label>
+
+        <div class="header-actions" style="display: flex; align-items: center; gap: 15px;">
+            <!-- Botón de Cambio de Idioma -->
+            <button id="language-switcher" class="lang-btn" aria-label="Cambiar idioma">
+                <i class="fas fa-globe"></i> <span id="lang-label">EN</span>
+            </button>
+
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" aria-label="Cambiar entre modo claro y modo oscuro"/>
+                    <div class="slider round">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </div>
+                </label>
+            </div>
         </div>
     </header>
 
@@ -132,14 +144,14 @@
         <section id="about" class="section hero-section">
             <div class="hero-content">
                 <div class="hero-text">
-                    <span class="badge">Computer Science Student</span>
-                    <h1>¡Hola! Soy <span class="highlight">Richard Cespedes</span></h1>
-                    <p class="bio">
+                    <span class="badge" data-i18n="hero.badge">Computer Science Student</span>
+                    <h1><span data-i18n="hero.greeting">¡Hola! Soy</span> <span class="highlight">Richard Cespedes</span></h1>
+                    <p class="bio" data-i18n="[html]hero.bio">
                         Estudiante de Ciencias de la Computación en la <strong>UCV</strong> y desarrollador Full Stack. Apasionado por entender los sistemas desde su arquitectura lógica hasta su implementación práctica. Me especializo en estructurar soluciones bajo arquitectura <strong>MVC</strong>, bases de datos relacionales y diseño de interfaces funcionales.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Contactar</a>
-                        <a href="#projects" class="btn btn-outline"><i class="fas fa-code"></i> Ver Proyectos</a>
+                        <a href="#contact" class="btn btn-outline"><i class="fas fa-paper-plane"></i> <span data-i18n="hero.btn_contact">Contactar</span></a>
+                        <a href="#projects" class="btn btn-outline"><i class="fas fa-code"></i> <span data-i18n="hero.btn_projects">Ver Proyectos</span></a>
                     </div>
                 </div>
                 <div class="hero-avatar">
@@ -151,35 +163,35 @@
         </section>
 
         <section id="education" class="section">
-            <h2 class="section-title">Estudios & Formación</h2>
+            <h2 class="section-title" data-i18n="education.title">Estudios & Formación</h2>
             <div class="grid-cards">
                 <div class="card hover-effect">
                     <div class="card-icon logo-institution">
                         <img src="Imagenes/logo.webp" alt="Logo Universidad Central de Venezuela">
                     </div>
                     <h3>Universidad Central de Venezuela</h3>
-                    <p class="subtitle">Licenciatura en Ciencias de la Computación</p>
-                    <span class="date-badge">2025 – Actualidad</span>
-                    <span class="date-badge">2do Semestre</span>
-                    <p class="description">Bases teóricas sólidas en algoritmos, estructuras de datos y lógica de computación.</p>
+                    <p class="subtitle" data-i18n="education.ucv.subtitle">Licenciatura en Ciencias de la Computación</p>
+                    <span class="date-badge" data-i18n="education.ucv.date">2025 – Actualidad</span>
+                    <span class="date-badge" data-i18n="education.ucv.term">2do Semestre</span>
+                    <p class="description" data-i18n="education.ucv.desc">Bases teóricas sólidas en algoritmos, estructuras de datos y lógica de computación.</p>
                 </div>
                 <div class="card hover-effect">
                     <div class="card-icon logo-institution">
                         <img src="Imagenes/logo-uneweb.webp" alt="Logo Uneweb">
                     </div>
                     <h3>Uneweb Instituto de Comunicación Web</h3>
-                    <p class="subtitle">Diplomado en Programación Full Stack</p>
+                    <p class="subtitle" data-i18n="education.uneweb.subtitle">Diplomado en Programación Full Stack</p>
                     <span class="date-badge">2025</span>
-                    <p class="description">Especialización en desarrollo web full stack, arquitectura MVC y bases de datos relacionales.</p>
+                    <p class="description" data-i18n="education.uneweb.desc">Especialización en desarrollo web full stack, arquitectura MVC y bases de datos relacionales.</p>
                 </div>
             </div>
         </section>
 
         <section id="skills" class="section">
-            <h2 class="section-title">Stack Técnico & Habilidades</h2>
+            <h2 class="section-title" data-i18n="skills.title">Stack Técnico & Habilidades</h2>
             <div class="skills-wrapper">
                 <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Lenguajes</h3>
+                    <h3><i class="fas fa-code"></i> <span data-i18n="skills.languages">Lenguajes</span></h3>
                     <div class="badges-grid">
                         <span class="skill-badge" style="--hover-color: #f7df1e;"><i class="fab fa-js"></i> JavaScript</span>
                         <span class="skill-badge" style="--hover-color: #777bb4;"><i class="fab fa-php"></i> PHP</span>
@@ -190,7 +202,7 @@
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Backend & Bases de Datos</h3>
+                    <h3><i class="fas fa-database"></i> <span data-i18n="skills.backend">Backend & Bases de Datos</span></h3>
                     <div class="badges-grid">
                         <span class="skill-badge" style="--hover-color: #4479a1;"><i class="fas fa-database"></i> MySQL</span>
                         <span class="skill-badge" style="--hover-color: #00758f;"><i class="fas fa-server"></i> MySQLi</span>
@@ -200,28 +212,28 @@
                 </div>
 
                 <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Librerías, Herramientas & Arquitectura</h3>
+                    <h3><i class="fas fa-tools"></i> <span data-i18n="skills.tools">Librerías, Herramientas & Arquitectura</span></h3>
                     <div class="badges-grid">
                         <span class="skill-badge" style="--hover-color: #f05032;"><i class="fab fa-git-alt"></i> Git</span>
                         <span class="skill-badge" style="--hover-color: #0769ad;"><i class="fas fa-cube"></i> jQuery</span>
                         <span class="skill-badge" style="--hover-color: #fb7a24;"><i class="fas fa-desktop"></i> XAMPP</span>
-                        <span class="skill-badge" style="--hover-color: #2f81f7;"><i class="fas fa-sitemap"></i> Arquitectura MVC</span>
-                        <span class="skill-badge" style="--hover-color: #8e44ad;"><i class="fas fa-cubes"></i> POO</span>
-                        <span class="skill-badge" style="--hover-color: #007ce2;"><i class="fas fa-exchange-alt"></i> AJAX</span>                        
+                        <span class="skill-badge" style="--hover-color: #2f81f7;"><i class="fas fa-sitemap"></i> <span data-i18n="skills.mvc">Arquitectura MVC</span></span>
+                        <span class="skill-badge" style="--hover-color: #8e44ad;"><i class="fas fa-cubes"></i> <span data-i18n="skills.oop">POO</span></span>
+                        <span class="skill-badge" style="--hover-color: #007ce2;"><i class="fas fa-exchange-alt"></i> AJAX</span>                       
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="projects" class="section">
-            <h2 class="section-title">Proyectos Destacados</h2>
+            <h2 class="section-title" data-i18n="projects.title">Proyectos Destacados</h2>
             <div id="projects-container" class="projects-grid"></div>
             <div id="pagination-container" class="pagination"></div>
         </section>
 
         <section id="contact" class="section">
-            <h2 class="section-title">Contacto</h2>
-            <p class="section-subtitle">¿Tienes algún proyecto en mente o te gustaría colaborar? ¡Contáctame!</p>
+            <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
+            <p class="section-subtitle" data-i18n="contact.subtitle">¿Tienes algún proyecto en mente o te gustaría colaborar? ¡Contáctame!</p>
             <div class="contact-grid">
                 <a href="https://wa.me/584141827058" target="_blank" rel="noopener noreferrer" class="contact-card hover-effect">
                     <i class="fab fa-whatsapp"></i>
@@ -230,7 +242,7 @@
                 </a>
                 <a href="mailto:rdavid12142007@gmail.com" class="contact-card hover-effect">
                     <i class="fas fa-envelope"></i>
-                    <h3>Correo Electrónico</h3>
+                    <h3 data-i18n="contact.email">Correo Electrónico</h3>
                     <p>rdavid12142007@gmail.com</p>
                 </a>
                 <a href="https://linkedin.com/in/richard-david-cespedes-turpial-b9968b29a" target="_blank" rel="noopener noreferrer" class="contact-card hover-effect">
@@ -251,6 +263,12 @@
         <p>&copy; 2026 Richard Cespedes. Guarenas, Miranda, Venezuela.</p>
     </footer>
 
+    <!-- Dependencias de i18next vía CDN -->
+    <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend/i18nextHttpBackend.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js"></script>
+    <!-- Tu script principal -->
     <script src="JavaScript/app.js"></script>
+    <script src="JavaScript/theme.js"></script>
 </body>
 </html>

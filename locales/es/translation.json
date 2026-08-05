@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "about": "Sobre Mí",
+    "education": "Estudios",
+    "skills": "Skills",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "back_to_projects": "Volver a Proyectos",
+    "lang_es": "Español",
+    "lang_en": "English"
+  },
+  "hero": {
+    "badge": "Computer Science Student",
+    "greeting": "¡Hola! Soy",
+    "bio": "Estudiante de Ciencias de la Computación en la <strong>UCV</strong> y desarrollador Full Stack. Apasionado por entender los sistemas desde su arquitectura lógica hasta su implementación práctica. Me especializo en estructurar soluciones bajo arquitectura <strong>MVC</strong>, bases de datos relacionales y diseño de interfaces funcionales.",
+    "btn_contact": "Contactar",
+    "btn_projects": "Ver Proyectos"
+  },
+  "education": {
+    "title": "Estudios & Formación",
+    "ucv": {
+      "subtitle": "Licenciatura en Ciencias de la Computación",
+      "date": "2025 – Actualidad",
+      "term": "2do Semestre",
+      "desc": "Bases teóricas sólidas en algoritmos, estructuras de datos y lógica de computación."
+    },
+    "uneweb": {
+      "subtitle": "Diplomado en Programación Full Stack",
+      "desc": "Especialización en desarrollo web full stack, arquitectura MVC y bases de datos relacionales."
+    }
+  },
+  "skills": {
+    "title": "Stack Técnico & Habilidades",
+    "languages": "Lenguajes",
+    "backend": "Backend & Bases de Datos",
+    "tools": "Librerías, Herramientas & Arquitectura",
+    "mvc": "Arquitectura MVC",
+    "oop": "POO"
+  },
+  "projects": {
+    "title": "Proyectos Destacados"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¿Tienes algún proyecto en mente o te gustaría colaborar? ¡Contáctame!",
+    "email": "Correo Electrónico"
+  },
+  "projects_data": {
+    "p1": {
+      "title": "Recopilado de Información UCV",
+      "description": "Plataforma web interactiva para buscar material de estudio por semestres académicos y materias."
+    },
+    "p2": {
+      "title": "Campus Virtual - Dashboard Administrativo",
+      "description": "Módulo de administración CRUD con filtros dinámicos en tiempo real. Para manejo académico a nivel secundario."
+    },
+    "p3": {
+      "title": "Cafetín Central",
+      "description": "Aplicación web completa para la gestión de menú digital, caja registradora y panel administrativo."
+    },
+    "p4": {
+      "title": "MascaTinder",
+      "description": "Plataforma de conexión social orientada a un canal de WhatsApp de estudiantes de la UCV."
+    },
+    "p5": {
+      "title": "Portafolio DevOdoru",
+      "description": "Plataforma web desarrollada a la medida para exhibir proyectos de desarrollo de videojuegos independientes."
+    }
+  },
+  "detail": {
+    "stack_title": "Stack & Tecnologías Utilizadas",
+    "description_title": "Descripción del Proyecto",
+    "p1_intro": "Esta herramienta fue desarrollada para facilitar a los estudiantes el acceso organizado a guías, problemarios y parciales resueltos estructurados por semestres académicos y materias. Su diseño prioriza el rendimiento, permitiendo filtrados rápidos y una consulta fluida de los recursos almacenados en la nube.",
+    "modules_title": "Módulos Claves & Características:",
+    "mod_chatbot": "<strong>Asistente Virtual (Chatbot):</strong> Módulo integrado para orientar al estudiante resolviendo dudas sobre los diversos materiales en la web y personales de sus materias.",
+    "mod_search": "<strong>Búsqueda & Filtros Dinámicos:</strong> Barra de búsqueda optimizada para la localización rápida de materias.",
+    "mod_responsive": "<strong>Diseño Adaptativo (Responsive):</strong> Interfaz totalmente fluida y accesible desde cualquier tipo de dispositivo móvil o de escritorio.",
+    "mod_404": "<strong>Control de Navegación (Página 404):</strong> Manejo de errores de ruta con una vista personalizada para guiar al usuario de vuelta.",
+    "mod_admin": "<strong>Panel Administrativo:</strong> Módulo interno para la gestión, actualización y carga ágil del material académico.",
+    "demo_title": "Demostración & Animaciones",
+    "video_nav": "Navegación y Filtros"
+  }
+}

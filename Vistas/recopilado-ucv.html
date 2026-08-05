@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recopilado de Información UCV | Proyecto</title>
-    
+
     <!-- Hojas de Estilo -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../CSS/styles.css">
@@ -21,7 +21,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="https://portafolio-xt6g.onrender.com/Imagenes/favicon.webp" />
     <link rel="manifest" href="../manifest.json">
 
-    <!-- Open Graph (WhatsApp, Facebook, LinkedIn, Discord, Slack) -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://portafolio-xt6g.onrender.com/Vistas/recopilado-ucv.html" />
     <meta property="og:title" content="Recopilado UCV | Portafolio" />
@@ -38,6 +38,9 @@
     <meta name="twitter:title" content="Recopilado UCV | Portafolio" />
     <meta name="twitter:description" content="Plataforma web interactiva para buscar material de estudio por semestres académicos y materias." />
     <meta name="twitter:image" content="https://portafolio-xt6g.onrender.com/Imagenes/recopilado1.webp" />
+
+    <!-- Control Temprano del Tema para evitar parpadeos de color -->
+    <script src="../JavaScript/theme-head.js"></script>
 
     <!-- Datos Estructurados JSON-LD -->
     <script type="application/ld+json">
@@ -64,30 +67,49 @@
         <div class="logo">
             <a href="../index.html" style="text-decoration: none; color: inherit;"><span>&lt;RC /&gt;</span></a>
         </div>
-        <nav>
-            <a href="../index.html#projects" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Volver a Proyectos</a>
+        
+        <nav class="nav-controls" style="display: flex; align-items: center; gap: 8px;">
+            <a href="../index.html#projects" class="btn btn-outline" aria-label="Volver a proyectos">
+                <i class="fas fa-arrow-left"></i> 
+                <span data-i18n="nav.back_to_projects">Volver a Proyectos</span>
+            </a>
         </nav>
+
+        <div class="header-actions" style="display: flex; align-items: center; gap: 15px;">
+            <!-- Botón de Cambio de Idioma -->
+            <button id="language-switcher" class="lang-btn" aria-label="Cambiar idioma">
+                <i class="fas fa-globe"></i> <span id="lang-label">EN</span>
+            </button>
+
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" aria-label="Cambiar entre modo claro y modo oscuro"/>
+                    <div class="slider round">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </div>
+                </label>
+            </div>
+        </div>        
     </header>
 
     <main class="project-detail-container">
         
         <!-- 1. Título del Proyecto -->
         <header class="project-header">
-            <h1 class="project-title">Recopilado de Información UCV</h1>
-            <p class="project-subtitle">Plataforma web para centralización de recursos académicos por semestre.</p>
+            <h1 class="project-title" data-i18n="projects_data.p1.title">Recopilado de Información UCV</h1>
+            <p class="project-subtitle" data-i18n="projects_data.p1.description">Plataforma web para centralización de recursos académicos por semestre.</p>
         </header>
 
         <!-- 2. Galería de Imágenes -->
         <section class="gallery-section">
             <div class="main-display">
-                <!-- Botón Izquierdo -->
                 <button class="nav-btn prev-btn" onclick="navigateGallery(-1)" aria-label="Imagen anterior">
                     <i class="fas fa-chevron-left"></i>
                 </button>
 
                 <img id="active-image" src="../Imagenes/recopilado1.webp" alt="Vista previa principal" class="zoomable-img" onclick="openModal()">
 
-                <!-- Botón Derecho -->
                 <button class="nav-btn next-btn" onclick="navigateGallery(1)" aria-label="Siguiente imagen">
                     <i class="fas fa-chevron-right"></i>
                 </button>
@@ -109,7 +131,7 @@
 
         <!-- 3. Tags / Tecnologías -->
         <section class="detail-block">
-            <h2><i class="fas fa-tags"></i> Stack & Tecnologías Utilizadas</h2>
+            <h2><i class="fas fa-tags"></i> <span data-i18n="detail.stack_title">Stack & Tecnologías Utilizadas</span></h2>
             <div class="tags-container">
                 <span class="tag-badge"><i class="fab fa-html5"></i> HTML5</span>
                 <span class="tag-badge"><i class="fab fa-css3-alt"></i> CSS3</span>
@@ -120,43 +142,43 @@
 
         <!-- 4. Descripción del Proyecto -->
         <section class="detail-block">
-            <h2><i class="fas fa-align-left"></i> Descripción del Proyecto</h2>
+            <h2><i class="fas fa-align-left"></i> <span data-i18n="detail.description_title">Descripción del Proyecto</span></h2>
             <div class="project-description">
-                <p>
-                    Esta herramienta fue desarrollada para facilitar a los estudiantes el acceso organizado a guías, problemarios y parciales resueltos estructurados por semestres académicos y materias. Su diseño prioriza el rendimiento, permitiendo filtrados rápidos y una consulta fluida de los recursos almacenados en la nube.
+                <p data-i18n="detail.p1_intro">
+                    Esta herramienta fue desarrollada para facilitar a los estudiantes el acceso organizado a guías, problemarios y parciales resueltos estructurados por semestres académicos y materias.
                 </p>
-                <p><strong>Módulos Claves & Características:</strong></p>
+                <p><strong data-i18n="detail.modules_title">Módulos Claves & Características:</strong></p>
                 <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
                     <li>
                         <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
-                        <strong>Asistente Virtual (Chatbot):</strong> Módulo integrado para orientar al estudiante resolviendo dudas sobre los diversos materiales en la web y personales de sus materias.
+                        <span data-i18n="[html]detail.mod_chatbot"><strong>Asistente Virtual (Chatbot):</strong> Módulo integrado para orientar al estudiante resolviendo dudas.</span>
                     </li>
                     <li>
                         <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
-                        <strong>Búsqueda & Filtros Dinámicos:</strong> Barra de búsqueda optimizada para la localización rápida de materias.
+                        <span data-i18n="[html]detail.mod_search"><strong>Búsqueda & Filtros Dinámicos:</strong> Barra de búsqueda optimizada para la localización rápida.</span>
                     </li>
                     <li>
                         <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
-                        <strong>Diseño Adaptativo (Responsive):</strong> Interfaz totalmente fluida y accesible desde cualquier tipo de dispositivo móvil o de escritorio.
+                        <span data-i18n="[html]detail.mod_responsive"><strong>Diseño Adaptativo (Responsive):</strong> Interfaz totalmente fluida.</span>
                     </li>
                     <li>
                         <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
-                        <strong>Control de Navegación (Página 404):</strong> Manejo de errores de ruta con una vista personalizada para guiar al usuario de vuelta.
+                        <span data-i18n="[html]detail.mod_404"><strong>Control de Navegación (Página 404):</strong> Manejo de errores de ruta con una vista personalizada.</span>
                     </li>
                     <li>
                         <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
-                        <strong>Panel Administrativo:</strong> Módulo interno para la gestión, actualización y carga ágil del material académico.
+                        <span data-i18n="[html]detail.mod_admin"><strong>Panel Administrativo:</strong> Módulo interno para la gestión del material.</span>
                     </li>
                 </ul>
             </div>
         </section>
 
-        <!-- 5. Anexo de Animaciones y Videos -->
+        <!-- 5. Demostración & Videos -->
         <section class="detail-block">
-            <h2><i class="fas fa-film"></i> Demostración & Animaciones</h2>
+            <h2><i class="fas fa-film"></i> <span data-i18n="detail.demo_title">Demostración & Animaciones</span></h2>
             <div class="video-grid">
                 <div class="video-card">
-                    <h3>Navegación y Filtros</h3>
+                    <h3 data-i18n="detail.video_nav">Navegación y Filtros</h3>
                     <div class="video-wrapper">
                         <video controls poster="../Imagenes/video-poster1.jpg">
                             <source src="../Videos/demo-navegacion.mp4" type="video/mp4">
@@ -188,22 +210,28 @@
         <p>&copy; 2026 Richard Cespedes. Guarenas, Miranda, Venezuela.</p>
     </footer>
 
-    <!-- Un solo bloque de scripts unificado -->
+    <!-- 1. Cargar dependencias de i18next PRIMERO -->
+    <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend/i18nextHttpBackend.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js"></script>
+
+    <!-- 2. Cargar scripts propios de la aplicación -->
+    <script src="../JavaScript/theme.js"></script>
+    <script src="../JavaScript/app.js"></script>
+
+    <!-- 3. Lógica específica de la galería y modal -->
     <script>
-        // 1. Cambia la imagen activa al hacer clic en una miniatura
         function changeImage(element) {
             document.getElementById('active-image').src = element.src;
             document.querySelectorAll('.thumb').forEach(thumb => thumb.classList.remove('active'));
             element.classList.add('active');
             
-            // Si el modal está abierto, actualizamos también la imagen ampliada
             const modalImg = document.getElementById('modal-img');
             if (modalImg) {
                 modalImg.src = element.src;
             }
         }
 
-        // 2. Abrir el modal
         function openModal() {
             const activeImg = document.getElementById('active-image');
             const modal = document.getElementById('image-modal');
@@ -214,7 +242,6 @@
             document.body.style.overflow = 'hidden';
         }
 
-        // 3. Cerrar el modal
         function closeModal(event) {
             if (event.target.closest('.modal-nav-btn')) return;
 
@@ -225,7 +252,6 @@
             }
         }
 
-        // 4. Navegar entre imágenes (Siguiente / Anterior)
         function navigateGallery(direction) {
             const thumbs = Array.from(document.querySelectorAll('.thumb'));
             if (thumbs.length === 0) return;
@@ -237,11 +263,9 @@
             if (newIndex < 0) newIndex = thumbs.length - 1;
 
             changeImage(thumbs[newIndex]);
-            
             thumbs[newIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
         }
 
-        // 5. Atajos de teclado (Escape, Flecha Izquierda, Flecha Derecha)
         document.addEventListener('keydown', function(event) {
             const modal = document.getElementById('image-modal');
             const isModalOpen = modal && modal.classList.contains('show');
@@ -256,6 +280,5 @@
             }
         });
     </script>
-
 </body>
 </html>
