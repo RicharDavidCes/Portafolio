@@ -197,8 +197,8 @@ input:checked + .slider.round:before {
 }
 
 .badge {
-    background-color: rgba(47, 129, 247, 0.15);
-    color: var(--accent-blue);
+    background-color: rgba(47, 129, 247, 0.2);
+    color: #58a6ff;
     padding: 6px 12px;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -438,13 +438,14 @@ input:checked + .slider.round:before {
 
 .tech-tag {
     display: inline-block;
-    background-color: rgba(47, 129, 247, 0.15);
-    color: var(--accent-blue);
+    background-color: rgba(56, 139, 253, 0.15);
+    color: #58a6ff;
     padding: 4px 10px;
     border-radius: 12px;
     font-size: 0.8rem;
     margin-right: 5px;
     margin-top: 8px;
+    font-weight: 500;
 }
 
 .card-icon.logo-institution {
@@ -486,4 +487,10 @@ footer {
         gap: 1rem;
     }
 
+}
+
+[data-theme="light"] .badge,
+[data-theme="light"] .tech-tag {
+    background-color: rgba(0, 86, 179, 0.12);
+    color: #004494; /* Azul oscuro accesible sobre fondo claro */
 }
