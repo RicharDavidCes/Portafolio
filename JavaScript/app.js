@@ -6,7 +6,7 @@ const projectsData = [
         url: "Vistas/recopilado-ucv.html",
         description: "Plataforma web interactiva para buscar material de estudio por semestres académicos y materias.",
         media: [
-            { type: "image", url: "Imagenes/recopilado1.png" }
+            { type: "image", url: "Imagenes/recopilado1.webp" }
         ],
         technologies: ["HTML5", "CSS3", "JavaScript", "Supabase"]
     },
@@ -16,7 +16,7 @@ const projectsData = [
         url: "Vistas/campus-virtual.html",
         description: "Módulo de administración CRUD con filtros dinámicos en tiempo real. Para manejo academico a nivel secundario",
         media: [
-            { type: "image", url: "Imagenes/campus-virtual1.png" }
+            { type: "image", url: "Imagenes/campus-virtual1.webp" }
         ],
         technologies: ["PHP", "MVC", "JavaScript", "HTML5", "CSS3", "MySQL", "MySQLi", "PhpMyAdmin", "Ajax", "jQuery", "XAMPP"]
     },
@@ -26,7 +26,7 @@ const projectsData = [
         url: "Vistas/cafetin-central.html",
         description: "Aplicación web completa para la gestión de menú digital, caja registradora y panel administrativo.",
         media: [
-            { type: "image", url: "Imagenes/cafetin1.png" }
+            { type: "image", url: "Imagenes/cafetin1.webp" }
         ],
         technologies: ["HTML5", "CSS3", "JavaScript"]
     },
@@ -36,7 +36,7 @@ const projectsData = [
         url: "Vistas/mascatinder.html",
         description: "Plataforma de conexión social orientada a un canal de Whatsapp de estudiantes de la UCV.",
         media: [
-            { type: "image", url: "Imagenes/mascatinder1.png" }
+            { type: "image", url: "Imagenes/mascatinder1.webp" }
         ],
         technologies: ["HTML5", "CSS3", "JavaScript", "Supabase"]
     },
@@ -46,7 +46,7 @@ const projectsData = [
         url: "Vistas/Portafolio-DevOdoru.html",
         description: "plataforma web desarrollada a la medida para exhibir proyectos de desarrollo de videojuegos independientes.",
         media: [
-            { type: "image", url: "Imagenes/devodoru1.png" }
+            { type: "image", url: "Imagenes/devodoru1.webp" }
         ],
         technologies: ["HTML5", "CSS3", "JavaScript", "Supabase"]
     }        
