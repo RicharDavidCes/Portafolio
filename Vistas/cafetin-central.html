@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafetín Central | Proyecto</title>
+    
+    <!-- Hojas de Estilo -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="stylesheet" href="../CSS/project-detail.css">
@@ -13,16 +15,10 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://portafolio-xt6g.onrender.com/Vistas/cafetin-central.html">
 
-    <!-- Favicon vectorial para navegadores modernos -->
+    <!-- Favicons & Manifest -->
     <link rel="icon" type="image/svg+xml" href="https://portafolio-xt6g.onrender.com/Imagenes/favicon.svg" />
-
-    <!-- Fallback PNG para compatibilidad general -->
-    <link rel="icon" type="image/png" sizes="180x180" href="https://portafolio-xt6g.onrender.com/Imagenes/favicon.png" />
-
-    <!-- Para cuando guardan tu web en la pantalla de inicio del iPhone -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://portafolio-xt6g.onrender.com/Imagenes/favicon.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="https://portafolio-xt6g.onrender.com/Imagenes/favicon.png" />
-    
-    <!-- Ruta relativa corregida subiendo un nivel desde /Vistas -->
     <link rel="manifest" href="../manifest.json">
 
     <!-- Open Graph (WhatsApp, Facebook, LinkedIn, Discord, Slack) -->
@@ -30,8 +26,6 @@
     <meta property="og:url" content="https://portafolio-xt6g.onrender.com/Vistas/cafetin-central.html" />
     <meta property="og:title" content="Cafetín Central | Portafolio" />
     <meta property="og:description" content="Sistema de gestión para cafetín universitario con menú digital, caja registradora y panel administrativo." />
-    
-    <!-- Imagen de vista previa del proyecto -->
     <meta property="og:image" content="https://portafolio-xt6g.onrender.com/Imagenes/cafetin1.png" />
     <meta property="og:image:secure_url" content="https://portafolio-xt6g.onrender.com/Imagenes/cafetin1.png" />
     <meta property="og:image:type" content="image/png" />
@@ -63,7 +57,6 @@
       }
     }
     </script>
-
 </head>
 <body>
 
@@ -81,10 +74,10 @@
         <!-- 1. Título del Proyecto -->
         <header class="project-header">
             <h1 class="project-title">Cafetín Central</h1>
-            <p class="project-subtitle">Aplicación web para gestión de menú digital, caja registradora y panel administrativo</p>
+            <p class="project-subtitle">Aplicación web para gestión de menú digital, caja registradora y panel administrativo.</p>
         </header>
 
-        <!-- 2. Galería de Imágenes (cafetin1 a cafetin8) -->
+        <!-- 2. Galería de Imágenes -->
         <section class="gallery-section">
             <div class="main-display">
                 <button class="nav-btn prev-btn" onclick="navigateGallery(-1)" aria-label="Imagen anterior">
@@ -110,7 +103,7 @@
             </div>
         </section>
 
-        <!-- 3. Stack & Tecnologías Real -->
+        <!-- 3. Stack & Tecnologías -->
         <section class="detail-block">
             <h2><i class="fas fa-tags"></i> Stack & Tecnologías Utilizadas</h2>
             <div class="tags-container">
@@ -125,14 +118,14 @@
             <h2><i class="fas fa-align-left"></i> Descripción del Proyecto</h2>
             <div class="project-description">
                 <p>
-                    <strong>Cafetín Central</strong> es una aplicación web completa diseñada para optimizar la administración operativa y la atención comercial en el cafetinde la facultad de ciencias de la ucv. La interfaz permite interactuar dinámicamente con un menú digital, llevar el control del punto de venta y supervisar la información administrativa de manera intuitiva. Realizado como proyecto en la materia de Introducción a la informatica.
+                    <strong>Cafetín Central</strong> es una aplicación web completa diseñada para optimizar la administración operativa y la atención comercial en el cafetín de la Facultad de Ciencias de la UCV. La interfaz permite interactuar dinámicamente con un menú digital, llevar el control del punto de venta y supervisar la información administrativa de manera intuitiva. Realizado como proyecto práctico para la asignatura Introducción a la Informática.
                 </p>
                 <p><strong>Módulos Claves & Características:</strong></p>
                 <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
                     <li>
                         <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
-                        <strong>Asistente Virtual (Chatbot):</strong> Módulo integrado para orientar al estudiante resolviendo dudas sobre el cafetin (horarios, precios y mas).
-                    </li>                    
+                        <strong>Asistente Virtual (Chatbot):</strong> Módulo integrado para orientar al estudiante resolviendo dudas sobre el cafetín (horarios, precios y más).
+                    </li>
                     <li>
                         <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
                         <strong>Menú Digital Interactivo:</strong> Visualización fluida de los productos disponibles y sus categorías.
@@ -160,8 +153,8 @@
                 <div class="video-card">
                     <h3>Navegación y Filtros</h3>
                     <div class="video-wrapper">
-                        <video controls poster="../assets/img/video-poster1.jpg">
-                            <source src="../assets/videos/demo-navegacion.mp4" type="video/mp4">
+                        <video controls poster="../Imagenes/video-poster1.jpg">
+                            <source src="../Videos/demo-navegacion.mp4" type="video/mp4">
                             Tu navegador no soporta la reproducción de video.
                         </video>
                     </div>
@@ -175,13 +168,13 @@
     <div id="image-modal" class="image-modal" onclick="closeModal(event)">
         <span class="close-modal">&times;</span>
         
-        <button class="modal-nav-btn modal-prev-btn" onclick="navigateGallery(-1)">
+        <button class="modal-nav-btn modal-prev-btn" onclick="navigateGallery(-1)" aria-label="Imagen anterior">
             <i class="fas fa-chevron-left"></i>
         </button>
         
         <img class="modal-content" id="modal-img" alt="Imagen ampliada">
         
-        <button class="modal-nav-btn modal-next-btn" onclick="navigateGallery(1)">
+        <button class="modal-nav-btn modal-next-btn" onclick="navigateGallery(1)" aria-label="Siguiente imagen">
             <i class="fas fa-chevron-right"></i>
         </button>
     </div>

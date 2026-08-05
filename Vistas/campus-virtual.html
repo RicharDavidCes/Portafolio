@@ -4,34 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Virtual | Proyecto</title>
+    
+    <!-- Hojas de estilo -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="stylesheet" href="../CSS/project-detail.css">
 
-    <!-- Meta etiquetas esenciales SEO para esta subpágina -->
+    <!-- Meta etiquetas SEO -->
     <meta name="description" content="Módulo de administración académica para nivel secundario desarrollado con PHP (MVC), MySQL, AJAX y JavaScript para gestión integral de alumnos, matrículas y profesores.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://portafolio-xt6g.onrender.com/Vistas/campus-virtual.html">
 
-    <!-- Favicon vectorial para navegadores modernos -->
+    <!-- Favicons & Manifest -->
     <link rel="icon" type="image/svg+xml" href="https://portafolio-xt6g.onrender.com/Imagenes/favicon.svg" />
-
-    <!-- Fallback PNG para compatibilidad general -->
     <link rel="icon" type="image/png" sizes="180x180" href="https://portafolio-xt6g.onrender.com/Imagenes/favicon.png" />
-
-    <!-- Para cuando guardan tu web en la pantalla de inicio del iPhone -->
     <link rel="apple-touch-icon" sizes="180x180" href="https://portafolio-xt6g.onrender.com/Imagenes/favicon.png" />
-    
-    <!-- Ruta relativa corregida subiendo un nivel desde /Vistas -->
     <link rel="manifest" href="../manifest.json">
 
-    <!-- Open Graph (WhatsApp, Facebook, LinkedIn, Discord, Slack) -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://portafolio-xt6g.onrender.com/Vistas/campus-virtual.html" />
     <meta property="og:title" content="Campus Virtual | Portafolio" />
     <meta property="og:description" content="Sistema de gestión educativa y dashboard administrativo bajo arquitectura MVC con PHP y MySQL." />
-    
-    <!-- Imagen de vista previa del proyecto -->
     <meta property="og:image" content="https://portafolio-xt6g.onrender.com/Imagenes/campus-virtual1.png" />
     <meta property="og:image:secure_url" content="https://portafolio-xt6g.onrender.com/Imagenes/campus-virtual1.png" />
     <meta property="og:image:type" content="image/png" />
@@ -63,7 +57,6 @@
           }
         }
     </script>
-
 </head>
 <body>
 
@@ -81,20 +74,18 @@
         <!-- 1. Título del Proyecto -->
         <header class="project-header">
             <h1 class="project-title">Campus Virtual - Dashboard Administrativo</h1>
-            <p class="project-subtitle">Módulo de administración para manejo academico a nivel secundario</p>
+            <p class="project-subtitle">Módulo de administración para manejo académico a nivel secundario</p>
         </header>
 
         <!-- 2. Galería de Imágenes -->
         <section class="gallery-section">
             <div class="main-display">
-                <!-- Botón Izquierdo -->
                 <button class="nav-btn prev-btn" onclick="navigateGallery(-1)" aria-label="Imagen anterior">
                     <i class="fas fa-chevron-left"></i>
                 </button>
 
                 <img id="active-image" src="../Imagenes/campus-virtual1.png" alt="Vista previa principal" class="zoomable-img" onclick="openModal()">
 
-                <!-- Botón Derecho -->
                 <button class="nav-btn next-btn" onclick="navigateGallery(1)" aria-label="Siguiente imagen">
                     <i class="fas fa-chevron-right"></i>
                 </button>
@@ -102,18 +93,18 @@
             
             <div class="thumbnail-bar">
                 <img src="../Imagenes/campus-virtual1.png" alt="Captura 1" class="thumb active" onclick="changeImage(this)">
-                <img src="../Imagenes/campus-virtual2.png" alt="Captura 2" class="thumb" onclick="changeImage(this)">
-                <img src="../Imagenes/campus-virtual3.png" alt="Captura 3" class="thumb" onclick="changeImage(this)">
-                <img src="../Imagenes/campus-virtual4.png" alt="Captura 4" class="thumb" onclick="changeImage(this)">
-                <img src="../Imagenes/campus-virtual5.png" alt="Captura 5" class="thumb" onclick="changeImage(this)">
-                <img src="../Imagenes/campus-virtual6.png" alt="Captura 6" class="thumb" onclick="changeImage(this)">
-                <img src="../Imagenes/campus-virtual7.png" alt="Captura 7" class="thumb" onclick="changeImage(this)">
-                <img src="../Imagenes/campus-virtual8.png" alt="Captura 8" class="thumb" onclick="changeImage(this)">
-                <img src="../Imagenes/campus-virtual9.png" alt="Captura 9" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/campus-virtual2.png" alt="Captura 2" class="thumb" loading="lazy" onclick="changeImage(this)">
+                <img src="../Imagenes/campus-virtual3.png" alt="Captura 3" class="thumb" loading="lazy" onclick="changeImage(this)">
+                <img src="../Imagenes/campus-virtual4.png" alt="Captura 4" class="thumb" loading="lazy" onclick="changeImage(this)">
+                <img src="../Imagenes/campus-virtual5.png" alt="Captura 5" class="thumb" loading="lazy" onclick="changeImage(this)">
+                <img src="../Imagenes/campus-virtual6.png" alt="Captura 6" class="thumb" loading="lazy" onclick="changeImage(this)">
+                <img src="../Imagenes/campus-virtual7.png" alt="Captura 7" class="thumb" loading="lazy" onclick="changeImage(this)">
+                <img src="../Imagenes/campus-virtual8.png" alt="Captura 8" class="thumb" loading="lazy" onclick="changeImage(this)">
+                <img src="../Imagenes/campus-virtual9.png" alt="Captura 9" class="thumb" loading="lazy" onclick="changeImage(this)">
             </div>
         </section>
 
-        <!-- 3. Tags / Tecnologías / Arquitecturas -->
+        <!-- 3. Tags / Tecnologías -->
         <section class="detail-block">
             <h2><i class="fas fa-tags"></i> Stack & Tecnologías Utilizadas</h2>
             <div class="tags-container">
@@ -146,19 +137,19 @@
                     <li><i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i><strong>Panel Administrativo:</strong> Gestión completa de usuarios, matrículas y registros académicos.</li>
                     <li><i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i><strong>Búsqueda & Filtros Dinámicos:</strong> Consulta instantánea de registros y recursos.</li>
                     <li><i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i><strong>Diseño Adaptive & Responsive:</strong> Interfaz optimizada para cualquier tamaño de pantalla.</li>
-                    <li><i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i><strong>Manejo de Errores:</strong> Sistema robusto que maneja errores de cualquier tipo en las entradas de datos, resistente ante las inyecciones sql y rollbacks en tablas de base de datos cuando se realizan ingresos multiples enlazados.</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i><strong>Manejo de Errores:</strong> Sistema robusto ante errores de entrada, resistente a inyecciones SQL y soporte de transacciones (rollbacks) en inserciones múltiples vinculadas.</li>
                 </ul>
             </div>
         </section>
 
-        <!-- 5. Anexo de Animaciones y Videos -->
+        <!-- 5. Demostración y Video -->
         <section class="detail-block">
             <h2><i class="fas fa-film"></i> Demostración & Animaciones</h2>
             <div class="video-grid">
                 <div class="video-card">
                     <h3>Navegación y Filtros</h3>
                     <div class="video-wrapper">
-                        <video controls poster="../assets/img/video-poster1.jpg">
+                        <video controls poster="../Imagenes/video-poster1.jpg">
                             <source src="../assets/videos/demo-navegacion.mp4" type="video/mp4">
                             Tu navegador no soporta la reproducción de video.
                         </video>
@@ -169,18 +160,17 @@
 
     </main>
 
-
-    <!-- Modal Lightbox en Pantalla Completa con Flechas -->
+    <!-- Modal Lightbox -->
     <div id="image-modal" class="image-modal" onclick="closeModal(event)">
         <span class="close-modal">&times;</span>
         
-        <button class="modal-nav-btn modal-prev-btn" onclick="navigateGallery(-1)">
+        <button class="modal-nav-btn modal-prev-btn" onclick="navigateGallery(-1)" aria-label="Imagen anterior en modal">
             <i class="fas fa-chevron-left"></i>
         </button>
         
         <img class="modal-content" id="modal-img" alt="Imagen ampliada">
         
-        <button class="modal-nav-btn modal-next-btn" onclick="navigateGallery(1)">
+        <button class="modal-nav-btn modal-next-btn" onclick="navigateGallery(1)" aria-label="Siguiente imagen en modal">
             <i class="fas fa-chevron-right"></i>
         </button>
     </div>
@@ -189,84 +179,70 @@
         <p>&copy; 2026 Richard Cespedes. Guarenas, Miranda, Venezuela.</p>
     </footer>
 
+    <!-- Script Consolidado -->
     <script>
         function changeImage(element) {
-            document.getElementById('active-image').src = element.src;
+            const activeImg = document.getElementById('active-image');
+            const modalImg = document.getElementById('modal-img');
+            
+            if (activeImg) activeImg.src = element.src;
+            if (modalImg) modalImg.src = element.src;
+
             document.querySelectorAll('.thumb').forEach(thumb => thumb.classList.remove('active'));
             element.classList.add('active');
         }
-    </script>
 
-<script>
-    // 1. Cambia la imagen activa al hacer clic en una miniatura
-    function changeImage(element) {
-        document.getElementById('active-image').src = element.src;
-        document.querySelectorAll('.thumb').forEach(thumb => thumb.classList.remove('active'));
-        element.classList.add('active');
-        
-        // Si el modal está abierto, actualizamos también la imagen ampliada
-        const modalImg = document.getElementById('modal-img');
-        if (modalImg) {
-            modalImg.src = element.src;
-        }
-    }
-
-    // 2. Abrir el modal
-    function openModal() {
-        const activeImg = document.getElementById('active-image');
-        const modal = document.getElementById('image-modal');
-        const modalImg = document.getElementById('modal-img');
-        
-        modalImg.src = activeImg.src;
-        modal.classList.add('show');
-        document.body.style.overflow = 'hidden';
-    }
-
-    // 3. Cerrar el modal
-    function closeModal(event) {
-        // Si hace clic en los botones de navegación del modal, no se cierra
-        if (event.target.closest('.modal-nav-btn')) return;
-
-        if (event.target.id === 'image-modal' || event.target.classList.contains('close-modal')) {
+        function openModal() {
+            const activeImg = document.getElementById('active-image');
             const modal = document.getElementById('image-modal');
-            modal.classList.remove('show');
-            document.body.style.overflow = 'auto';
+            const modalImg = document.getElementById('modal-img');
+            
+            if (modal && modalImg && activeImg) {
+                modalImg.src = activeImg.src;
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
         }
-    }
 
-    // 4. Funciones auxiliares para navegar (Siguiente / Anterior)
-    function navigateGallery(direction) {
-        const thumbs = Array.from(document.querySelectorAll('.thumb'));
-        if (thumbs.length === 0) return;
+        function closeModal(event) {
+            if (event.target.closest('.modal-nav-btn')) return;
 
-        const currentIndex = thumbs.findIndex(thumb => thumb.classList.contains('active'));
-        let newIndex = currentIndex + direction;
-
-        // Bucle infinito: si pasa de la última vuelve a la primera y viceversa
-        if (newIndex >= thumbs.length) newIndex = 0;
-        if (newIndex < 0) newIndex = thumbs.length - 1;
-
-        changeImage(thumbs[newIndex]);
-        
-        // Asegura que la miniatura seleccionada haga scroll automático si no es visible
-        thumbs[newIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
-    }
-
-    // 5. Oyente global para eventos del teclado (Escape, Flecha Izquierda, Flecha Derecha)
-    document.addEventListener('keydown', function(event) {
-        const modal = document.getElementById('image-modal');
-        const isModalOpen = modal && modal.classList.contains('show');
-
-        if (event.key === 'ArrowRight') {
-            navigateGallery(1); // Siguiente imagen
-        } else if (event.key === 'ArrowLeft') {
-            navigateGallery(-1); // Imagen anterior
-        } else if (event.key === 'Escape' && isModalOpen) {
-            modal.classList.remove('show');
-            document.body.style.overflow = 'auto';
+            if (event.target.id === 'image-modal' || event.target.classList.contains('close-modal')) {
+                const modal = document.getElementById('image-modal');
+                if (modal) {
+                    modal.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                }
+            }
         }
-    });
-</script>
 
+        function navigateGallery(direction) {
+            const thumbs = Array.from(document.querySelectorAll('.thumb'));
+            if (thumbs.length === 0) return;
+
+            const currentIndex = thumbs.findIndex(thumb => thumb.classList.contains('active'));
+            let newIndex = currentIndex + direction;
+
+            if (newIndex >= thumbs.length) newIndex = 0;
+            if (newIndex < 0) newIndex = thumbs.length - 1;
+
+            changeImage(thumbs[newIndex]);
+            thumbs[newIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+        }
+
+        document.addEventListener('keydown', function(event) {
+            const modal = document.getElementById('image-modal');
+            const isModalOpen = modal && modal.classList.contains('show');
+
+            if (event.key === 'ArrowRight') {
+                navigateGallery(1);
+            } else if (event.key === 'ArrowLeft') {
+                navigateGallery(-1);
+            } else if (event.key === 'Escape' && isModalOpen) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
 </body>
 </html>

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio DevOdoru | Proyecto</title>
+    
+    <!-- Hojas de estilo -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="stylesheet" href="../CSS/project-detail.css">
@@ -13,25 +15,17 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://portafolio-xt6g.onrender.com/Vistas/portafolio-devodoru.html">
 
-    <!-- Favicon vectorial para navegadores modernos -->
+    <!-- Favicons & Manifest -->
     <link rel="icon" type="image/svg+xml" href="https://portafolio-xt6g.onrender.com/Imagenes/favicon.svg" />
-
-    <!-- Fallback PNG para compatibilidad general -->
     <link rel="icon" type="image/png" sizes="180x180" href="https://portafolio-xt6g.onrender.com/Imagenes/favicon.png" />
-
-    <!-- Para cuando guardan tu web en la pantalla de inicio del iPhone -->
     <link rel="apple-touch-icon" sizes="180x180" href="https://portafolio-xt6g.onrender.com/Imagenes/favicon.png" />
-    
-    <!-- Ruta relativa corregida subiendo un nivel desde /Vistas -->
     <link rel="manifest" href="../manifest.json">
 
-    <!-- Open Graph (WhatsApp, Facebook, LinkedIn, Discord, Slack) -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://portafolio-xt6g.onrender.com/Vistas/portafolio-devodoru.html" />
     <meta property="og:title" content="Portafolio Devodoru | Proyecto" />
     <meta property="og:description" content="Plataforma web dinámica para desarrollador de videojuegos con catálogo interactivo y panel administrativo con Supabase." />
-    
-    <!-- Imagen de vista previa del proyecto -->
     <meta property="og:image" content="https://portafolio-xt6g.onrender.com/Imagenes/devodoru1.png" />
     <meta property="og:image:secure_url" content="https://portafolio-xt6g.onrender.com/Imagenes/devodoru1.png" />
     <meta property="og:image:type" content="image/png" />
@@ -63,7 +57,6 @@
           }
         }
     </script>
-
 </head>
 <body>
 
@@ -100,9 +93,9 @@
             
             <div class="thumbnail-bar">
                 <img src="../Imagenes/devodoru1.png" alt="Captura 1" class="thumb active" onclick="changeImage(this)">
-                <img src="../Imagenes/devodoru2.png" alt="Captura 2" class="thumb" onclick="changeImage(this)">
-                <img src="../Imagenes/devodoru3.png" alt="Captura 3" class="thumb" onclick="changeImage(this)">
-                <img src="../Imagenes/devodoru4.png" alt="Captura 4" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/devodoru2.png" alt="Captura 2" class="thumb" loading="lazy" onclick="changeImage(this)">
+                <img src="../Imagenes/devodoru3.png" alt="Captura 3" class="thumb" loading="lazy" onclick="changeImage(this)">
+                <img src="../Imagenes/devodoru4.png" alt="Captura 4" class="thumb" loading="lazy" onclick="changeImage(this)">
             </div>
         </section>
 
@@ -167,7 +160,7 @@
                 <div class="video-card">
                     <h3>Demostración del Panel y Landing</h3>
                     <div class="video-wrapper">
-                        <video controls poster="../assets/img/video-poster1.jpg">
+                        <video controls poster="../Imagenes/video-poster1.jpg">
                             <source src="../assets/videos/demo-devodoru.mp4" type="video/mp4">
                             Tu navegador no soporta la reproducción de video.
                         </video>
@@ -182,13 +175,13 @@
     <div id="image-modal" class="image-modal" onclick="closeModal(event)">
         <span class="close-modal">&times;</span>
         
-        <button class="modal-nav-btn modal-prev-btn" onclick="navigateGallery(-1)">
+        <button class="modal-nav-btn modal-prev-btn" onclick="navigateGallery(-1)" aria-label="Imagen anterior en modal">
             <i class="fas fa-chevron-left"></i>
         </button>
         
         <img class="modal-content" id="modal-img" alt="Imagen ampliada">
         
-        <button class="modal-nav-btn modal-next-btn" onclick="navigateGallery(1)">
+        <button class="modal-nav-btn modal-next-btn" onclick="navigateGallery(1)" aria-label="Siguiente imagen en modal">
             <i class="fas fa-chevron-right"></i>
         </button>
     </div>
@@ -197,16 +190,17 @@
         <p>&copy; 2026 Richard Cespedes. Guarenas, Miranda, Venezuela.</p>
     </footer>
 
+    <!-- Script Consolidado -->
     <script>
         function changeImage(element) {
-            document.getElementById('active-image').src = element.src;
+            const activeImg = document.getElementById('active-image');
+            const modalImg = document.getElementById('modal-img');
+
+            if (activeImg) activeImg.src = element.src;
+            if (modalImg) modalImg.src = element.src;
+
             document.querySelectorAll('.thumb').forEach(thumb => thumb.classList.remove('active'));
             element.classList.add('active');
-            
-            const modalImg = document.getElementById('modal-img');
-            if (modalImg) {
-                modalImg.src = element.src;
-            }
         }
 
         function openModal() {
@@ -214,9 +208,11 @@
             const modal = document.getElementById('image-modal');
             const modalImg = document.getElementById('modal-img');
             
-            modalImg.src = activeImg.src;
-            modal.classList.add('show');
-            document.body.style.overflow = 'hidden';
+            if (modal && modalImg && activeImg) {
+                modalImg.src = activeImg.src;
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
         }
 
         function closeModal(event) {
@@ -224,8 +220,10 @@
 
             if (event.target.id === 'image-modal' || event.target.classList.contains('close-modal')) {
                 const modal = document.getElementById('image-modal');
-                modal.classList.remove('show');
-                document.body.style.overflow = 'auto';
+                if (modal) {
+                    modal.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                }
             }
         }
 

@@ -4,24 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recopilado de Información UCV | Proyecto</title>
+    
+    <!-- Hojas de Estilo -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="stylesheet" href="../CSS/project-detail.css">
 
-    <!-- Meta etiquetas esenciales SEO para esta subpágina -->
+    <!-- Meta etiquetas esenciales SEO -->
     <meta name="description" content="Plataforma web interactiva desarrollada para buscar y gestionar material de estudio, guías y recursos académicos organizados por semestres y materias de Ciencias de la Computación en la UCV.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://portafolio-xt6g.onrender.com/Vistas/recopilado-ucv.html">
 
-    <!-- Favicon vectorial para navegadores modernos -->
+    <!-- Favicons & Manifest -->
     <link rel="icon" type="image/svg+xml" href="https://portafolio-xt6g.onrender.com/Imagenes/favicon.svg" />
-
-    <!-- Fallback PNG para compatibilidad general -->
-    <link rel="icon" type="image/png" sizes="180x180" href="https://portafolio-xt6g.onrender.com/Imagenes/favicon.png" />
-
-    <!-- Para cuando guardan tu web en la pantalla de inicio del iPhone -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://portafolio-xt6g.onrender.com/Imagenes/favicon.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="https://portafolio-xt6g.onrender.com/Imagenes/favicon.png" />
-    
     <link rel="manifest" href="../manifest.json">
 
     <!-- Open Graph (WhatsApp, Facebook, LinkedIn, Discord, Slack) -->
@@ -29,8 +26,6 @@
     <meta property="og:url" content="https://portafolio-xt6g.onrender.com/Vistas/recopilado-ucv.html" />
     <meta property="og:title" content="Recopilado UCV | Portafolio" />
     <meta property="og:description" content="Plataforma web interactiva para buscar material de estudio por semestres académicos y materias." />
-    
-    <!-- URL DIRECTA (Sin proxy) para máxima compatibilidad con scrapers -->
     <meta property="og:image" content="https://portafolio-xt6g.onrender.com/Imagenes/recopilado1.png" />
     <meta property="og:image:secure_url" content="https://portafolio-xt6g.onrender.com/Imagenes/recopilado1.png" />
     <meta property="og:image:type" content="image/png" />
@@ -44,7 +39,7 @@
     <meta name="twitter:description" content="Plataforma web interactiva para buscar material de estudio por semestres académicos y materias." />
     <meta name="twitter:image" content="https://portafolio-xt6g.onrender.com/Imagenes/recopilado1.png" />
 
-    <!-- Datos Estructurados JSON-LD (Corregido) -->
+    <!-- Datos Estructurados JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -62,7 +57,6 @@
       }
     }
     </script>
-
 </head>
 <body>
 
@@ -113,7 +107,7 @@
             </div>
         </section>
 
-        <!-- 3. Tags / Tecnologías / Arquitecturas -->
+        <!-- 3. Tags / Tecnologías -->
         <section class="detail-block">
             <h2><i class="fas fa-tags"></i> Stack & Tecnologías Utilizadas</h2>
             <div class="tags-container">
@@ -139,7 +133,7 @@
                     </li>
                     <li>
                         <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
-                        <strong>Búsqueda & Filtros Dinámicos:</strong> Barra de búsqueda optimizada para la localización rápida materias .
+                        <strong>Búsqueda & Filtros Dinámicos:</strong> Barra de búsqueda optimizada para la localización rápida de materias.
                     </li>
                     <li>
                         <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
@@ -164,8 +158,8 @@
                 <div class="video-card">
                     <h3>Navegación y Filtros</h3>
                     <div class="video-wrapper">
-                        <video controls poster="../assets/img/video-poster1.jpg">
-                            <source src="../assets/videos/demo-navegacion.mp4" type="video/mp4">
+                        <video controls poster="../Imagenes/video-poster1.jpg">
+                            <source src="../Videos/demo-navegacion.mp4" type="video/mp4">
                             Tu navegador no soporta la reproducción de video.
                         </video>
                     </div>
@@ -175,18 +169,17 @@
 
     </main>
 
-
-    <!-- Modal Lightbox en Pantalla Completa con Flechas -->
+    <!-- Modal Lightbox en Pantalla Completa -->
     <div id="image-modal" class="image-modal" onclick="closeModal(event)">
         <span class="close-modal">&times;</span>
         
-        <button class="modal-nav-btn modal-prev-btn" onclick="navigateGallery(-1)">
+        <button class="modal-nav-btn modal-prev-btn" onclick="navigateGallery(-1)" aria-label="Imagen anterior">
             <i class="fas fa-chevron-left"></i>
         </button>
         
         <img class="modal-content" id="modal-img" alt="Imagen ampliada">
         
-        <button class="modal-nav-btn modal-next-btn" onclick="navigateGallery(1)">
+        <button class="modal-nav-btn modal-next-btn" onclick="navigateGallery(1)" aria-label="Siguiente imagen">
             <i class="fas fa-chevron-right"></i>
         </button>
     </div>
@@ -195,84 +188,74 @@
         <p>&copy; 2026 Richard Cespedes. Guarenas, Miranda, Venezuela.</p>
     </footer>
 
+    <!-- Un solo bloque de scripts unificado -->
     <script>
+        // 1. Cambia la imagen activa al hacer clic en una miniatura
         function changeImage(element) {
             document.getElementById('active-image').src = element.src;
             document.querySelectorAll('.thumb').forEach(thumb => thumb.classList.remove('active'));
             element.classList.add('active');
+            
+            // Si el modal está abierto, actualizamos también la imagen ampliada
+            const modalImg = document.getElementById('modal-img');
+            if (modalImg) {
+                modalImg.src = element.src;
+            }
         }
-    </script>
 
-<script>
-    // 1. Cambia la imagen activa al hacer clic en una miniatura
-    function changeImage(element) {
-        document.getElementById('active-image').src = element.src;
-        document.querySelectorAll('.thumb').forEach(thumb => thumb.classList.remove('active'));
-        element.classList.add('active');
-        
-        // Si el modal está abierto, actualizamos también la imagen ampliada
-        const modalImg = document.getElementById('modal-img');
-        if (modalImg) {
-            modalImg.src = element.src;
-        }
-    }
-
-    // 2. Abrir el modal
-    function openModal() {
-        const activeImg = document.getElementById('active-image');
-        const modal = document.getElementById('image-modal');
-        const modalImg = document.getElementById('modal-img');
-        
-        modalImg.src = activeImg.src;
-        modal.classList.add('show');
-        document.body.style.overflow = 'hidden';
-    }
-
-    // 3. Cerrar el modal
-    function closeModal(event) {
-        // Si hace clic en los botones de navegación del modal, no se cierra
-        if (event.target.closest('.modal-nav-btn')) return;
-
-        if (event.target.id === 'image-modal' || event.target.classList.contains('close-modal')) {
+        // 2. Abrir el modal
+        function openModal() {
+            const activeImg = document.getElementById('active-image');
             const modal = document.getElementById('image-modal');
-            modal.classList.remove('show');
-            document.body.style.overflow = 'auto';
+            const modalImg = document.getElementById('modal-img');
+            
+            modalImg.src = activeImg.src;
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
         }
-    }
 
-    // 4. Funciones auxiliares para navegar (Siguiente / Anterior)
-    function navigateGallery(direction) {
-        const thumbs = Array.from(document.querySelectorAll('.thumb'));
-        if (thumbs.length === 0) return;
+        // 3. Cerrar el modal
+        function closeModal(event) {
+            if (event.target.closest('.modal-nav-btn')) return;
 
-        const currentIndex = thumbs.findIndex(thumb => thumb.classList.contains('active'));
-        let newIndex = currentIndex + direction;
-
-        // Bucle infinito: si pasa de la última vuelve a la primera y viceversa
-        if (newIndex >= thumbs.length) newIndex = 0;
-        if (newIndex < 0) newIndex = thumbs.length - 1;
-
-        changeImage(thumbs[newIndex]);
-        
-        // Asegura que la miniatura seleccionada haga scroll automático si no es visible
-        thumbs[newIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
-    }
-
-    // 5. Oyente global para eventos del teclado (Escape, Flecha Izquierda, Flecha Derecha)
-    document.addEventListener('keydown', function(event) {
-        const modal = document.getElementById('image-modal');
-        const isModalOpen = modal && modal.classList.contains('show');
-
-        if (event.key === 'ArrowRight') {
-            navigateGallery(1); // Siguiente imagen
-        } else if (event.key === 'ArrowLeft') {
-            navigateGallery(-1); // Imagen anterior
-        } else if (event.key === 'Escape' && isModalOpen) {
-            modal.classList.remove('show');
-            document.body.style.overflow = 'auto';
+            if (event.target.id === 'image-modal' || event.target.classList.contains('close-modal')) {
+                const modal = document.getElementById('image-modal');
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
         }
-    });
-</script>
+
+        // 4. Navegar entre imágenes (Siguiente / Anterior)
+        function navigateGallery(direction) {
+            const thumbs = Array.from(document.querySelectorAll('.thumb'));
+            if (thumbs.length === 0) return;
+
+            const currentIndex = thumbs.findIndex(thumb => thumb.classList.contains('active'));
+            let newIndex = currentIndex + direction;
+
+            if (newIndex >= thumbs.length) newIndex = 0;
+            if (newIndex < 0) newIndex = thumbs.length - 1;
+
+            changeImage(thumbs[newIndex]);
+            
+            thumbs[newIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+        }
+
+        // 5. Atajos de teclado (Escape, Flecha Izquierda, Flecha Derecha)
+        document.addEventListener('keydown', function(event) {
+            const modal = document.getElementById('image-modal');
+            const isModalOpen = modal && modal.classList.contains('show');
+
+            if (event.key === 'ArrowRight') {
+                navigateGallery(1);
+            } else if (event.key === 'ArrowLeft') {
+                navigateGallery(-1);
+            } else if (event.key === 'Escape' && isModalOpen) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
 
 </body>
 </html>
