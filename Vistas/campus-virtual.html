@@ -39,6 +39,9 @@
     <meta name="twitter:description" content="Sistema de gestión educativa y dashboard administrativo bajo arquitectura MVC con PHP y MySQL." />
     <meta name="twitter:image" content="https://portafolio-xt6g.onrender.com/Imagenes/campus-virtual1.webp" />
 
+    <!-- Control Temprano del Tema -->
+    <script src="../JavaScript/theme-head.js"></script>
+
     <!-- Datos Estructurados JSON-LD -->
     <script type="application/ld+json">
         {
@@ -64,17 +67,39 @@
         <div class="logo">
             <a href="../index.html" style="text-decoration: none; color: inherit;"><span>&lt;RC /&gt;</span></a>
         </div>
-        <nav>
-            <a href="../index.html#projects" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Volver a Proyectos</a>
+
+        <nav class="nav-controls" style="display: flex; align-items: center; gap: 8px;">
+            <a href="../index.html#projects" class="btn btn-outline" aria-label="Volver a proyectos">
+                <i class="fas fa-arrow-left"></i> 
+                <span data-i18n="nav.back_to_projects">Volver a Proyectos</span>
+            </a>
         </nav>
+
+        <div class="header-actions" style="display: flex; align-items: center; gap: 15px;">
+            <!-- Botón de Cambio de Idioma -->
+            <button id="language-switcher" class="lang-btn" aria-label="Cambiar idioma">
+                <i class="fas fa-globe"></i> <span id="lang-label">EN</span>
+            </button>
+
+            <!-- Botón de Tema Claro/Oscuro -->
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" aria-label="Cambiar entre modo claro y modo oscuro"/>
+                    <div class="slider round">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </div>
+                </label>
+            </div>
+        </div>        
     </header>
 
     <main class="project-detail-container">
         
         <!-- 1. Título del Proyecto -->
         <header class="project-header">
-            <h1 class="project-title">Campus Virtual - Dashboard Administrativo</h1>
-            <p class="project-subtitle">Módulo de administración para manejo académico a nivel secundario</p>
+            <h1 class="project-title" data-i18n="projects_data.p2.title">Campus Virtual - Dashboard Administrativo</h1>
+            <p class="project-subtitle" data-i18n="projects_data.p2.description">Módulo de administración para manejo académico a nivel secundario</p>
         </header>
 
         <!-- 2. Galería de Imágenes -->
@@ -106,7 +131,7 @@
 
         <!-- 3. Tags / Tecnologías -->
         <section class="detail-block">
-            <h2><i class="fas fa-tags"></i> Stack & Tecnologías Utilizadas</h2>
+            <h2><i class="fas fa-tags"></i> <span data-i18n="detail.stack_title">Stack & Tecnologías Utilizadas</span></h2>
             <div class="tags-container">
                 <span class="tag-badge"><i class="fab fa-php"></i> PHP</span>
                 <span class="tag-badge"><i class="fas fa-sitemap"></i> MVC</span>
@@ -124,30 +149,42 @@
 
         <!-- 4. Descripción del Proyecto -->
         <section class="detail-block">
-            <h2><i class="fas fa-align-left"></i> Descripción del Proyecto</h2>
+            <h2><i class="fas fa-align-left"></i> <span data-i18n="detail.description_title">Descripción del Proyecto</span></h2>
             <div class="project-description">
-                <p>
+                <p data-i18n="[html]campus_virtual.intro_p1">
                     <strong>Campus Virtual</strong> es un sistema de gestión educativa diseñado para optimizar la administración académica y el control institucional a nivel secundario. La plataforma centraliza el flujo de información entre docentes, estudiantes y administradores en una interfaz ágil e intuitiva.
                 </p>
-                <p>
+                <p data-i18n="[html]campus_virtual.intro_p2">
                     El sistema está construido bajo la arquitectura <strong>MVC</strong>, garantizando una separación clara entre la lógica de negocio y la interfaz. A través de peticiones asíncronas con <strong>AJAX</strong> y la integración de <strong>MySQL</strong>, ofrece filtrados en tiempo real y operaciones CRUD sin recargas de página.
                 </p>
-                <p><strong>Módulos y Características Clave:</strong></p>
+                <p><strong data-i18n="campus_virtual.modules_title">Módulos y Características Clave:</strong></p>
                 <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
-                    <li><i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i><strong>Panel Administrativo:</strong> Gestión completa de usuarios, matrículas y registros académicos.</li>
-                    <li><i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i><strong>Búsqueda & Filtros Dinámicos:</strong> Consulta instantánea de registros y recursos.</li>
-                    <li><i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i><strong>Diseño Adaptive & Responsive:</strong> Interfaz optimizada para cualquier tamaño de pantalla.</li>
-                    <li><i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i><strong>Manejo de Errores:</strong> Sistema robusto ante errores de entrada, resistente a inyecciones SQL y soporte de transacciones (rollbacks) en inserciones múltiples vinculadas.</li>
+                    <li>
+                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <span data-i18n="[html]campus_virtual.mod_admin"><strong>Panel Administrativo:</strong> Gestión completa de usuarios, matrículas y registros académicos.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <span data-i18n="[html]campus_virtual.mod_search"><strong>Búsqueda & Filtros Dinámicos:</strong> Consulta instantánea de registros y recursos.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <span data-i18n="[html]campus_virtual.mod_responsive"><strong>Diseño Adaptive & Responsive:</strong> Interfaz optimizada para cualquier tamaño de pantalla.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <span data-i18n="[html]campus_virtual.mod_errors"><strong>Manejo de Errores:</strong> Sistema robusto ante errores de entrada, resistente a inyecciones SQL y soporte de transacciones (rollbacks) en inserciones múltiples vinculadas.</span>
+                    </li>
                 </ul>
             </div>
         </section>
 
         <!-- 5. Demostración y Video -->
         <section class="detail-block">
-            <h2><i class="fas fa-film"></i> Demostración & Animaciones</h2>
+            <h2><i class="fas fa-film"></i> <span data-i18n="detail.demo_title">Demostración & Animaciones</span></h2>
             <div class="video-grid">
                 <div class="video-card">
-                    <h3>Navegación y Filtros</h3>
+                    <h3 data-i18n="detail.video_nav">Navegación y Filtros</h3>
                     <div class="video-wrapper">
                         <video controls poster="../Imagenes/video-poster1.webp">
                             <source src="../assets/videos/demo-navegacion.mp4" type="video/mp4">
@@ -179,7 +216,16 @@
         <p>&copy; 2026 Richard Cespedes. Guarenas, Miranda, Venezuela.</p>
     </footer>
 
-    <!-- Script Consolidado -->
+    <!-- 1. Cargar dependencias i18next PRIMERO -->
+    <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend/i18nextHttpBackend.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js"></script>
+
+    <!-- 2. Cargar scripts de la aplicación -->
+    <script src="../JavaScript/theme.js"></script>
+    <script src="../JavaScript/app.js"></script>
+
+    <!-- 3. Lógica específica de galería y modal -->
     <script>
         function changeImage(element) {
             const activeImg = document.getElementById('active-image');

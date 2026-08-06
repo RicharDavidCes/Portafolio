@@ -52,7 +52,7 @@
     },
     "p2": {
       "title": "Virtual Campus - Administrative Dashboard",
-      "description": "CRUD administration module with real-time dynamic filters for secondary school academic management."
+      "description": "Administration module for secondary school academic management."
     },
     "p3": {
       "title": "Central Cafeteria",
@@ -70,14 +70,54 @@
   "detail": {
     "stack_title": "Stack & Technologies Used",
     "description_title": "Project Description",
-    "p1_intro": "This tool was developed to provide students with organized access to study guides, problem sets, and solved exams structured by academic semesters and subjects. Its design prioritizes performance, allowing fast filtering and seamless access to cloud-stored resources.",
-    "modules_title": "Key Modules & Features:",
-    "mod_chatbot": "<strong>Virtual Assistant (Chatbot):</strong> Integrated module to assist students by answering questions about web resources and course materials.",
-    "mod_search": "<strong>Dynamic Search & Filters:</strong> Optimized search bar for fast subject lookup.",
-    "mod_responsive": "<strong>Responsive Design:</strong> Fully fluid interface accessible from any mobile or desktop device.",
-    "mod_404": "<strong>Navigation Control (404 Page):</strong> Route error handling with a custom view to guide users back.",
-    "mod_admin": "<strong>Admin Panel:</strong> Internal module for agile management, updating, and uploading of academic materials.",
+    "features_title": "Key Modules & Features",
     "demo_title": "Demo & Animations",
-    "video_nav": "Navigation and Filters"
+    "video_nav": "Navigation and Filters",
+    "video_demo": "Dashboard & Landing Demo"
+  },
+  "recopilado_ucv": {
+    "intro_p1": "<strong>UCV Information Hub</strong> is a tool developed to provide Computer Science students with organized access to guides, practice problems, and solved exams structured by academic semesters and subjects.",
+    "intro_p2": "Development focused on ensuring fast loading speeds, a clear semantic structure, and a responsive experience across both mobile devices and desktop screens.",
+    "mod_chatbot": "<strong>Virtual Assistant (Chatbot):</strong> Integrated module designed to guide students and answer queries.",
+    "mod_search": "<strong>Dynamic Search & Filters:</strong> Optimized search bar for fast content retrieval.",
+    "mod_responsive": "<strong>Adaptive Design (Responsive):</strong> Fully fluid interface.",
+    "mod_404": "<strong>Navigation Control (404 Page):</strong> Route error handling with a custom view.",
+    "mod_admin": "<strong>Administrative Panel:</strong> Internal module for material management."
+  },
+  "campus_virtual": {
+    "intro_p1": "<strong>Virtual Campus</strong> is an educational management system designed to optimize academic administration and institutional control at the secondary level. The platform centralizes the information flow between teachers, students, and administrators within an agile and intuitive interface.",
+    "intro_p2": "The system is built under the <strong>MVC</strong> architecture, ensuring a clear separation between business logic and the user interface. Through asynchronous requests with <strong>AJAX</strong> and <strong>MySQL</strong> integration, it delivers real-time filtering and CRUD operations without page reloads.",
+    "mod_admin": "<strong>Administrative Panel:</strong> Full management of users, enrollments, and academic records.",
+    "mod_search": "<strong>Dynamic Search & Filters:</strong> Instant query of records and resources.",
+    "mod_responsive": "<strong>Adaptive & Responsive Design:</strong> Optimized interface for any screen size.",
+    "mod_errors": "<strong>Error Handling:</strong> Robust system against input errors, SQL injection resistant, supporting transactions (rollbacks) on linked multiple insertions."
+  },
+  "cafetin_central": {
+    "intro_p1": "<strong>Central Cafeteria</strong> is a comprehensive web application designed to optimize operational management and commercial service at the UCV Faculty of Sciences cafeteria. The interface allows dynamic interaction with a digital menu, point-of-sale control, and administrative supervision. Developed as a practical project for Introduction to Computer Science.",
+    "mod_chatbot": "<strong>Virtual Assistant (Chatbot):</strong> Integrated module to guide students with cafeteria queries (schedules, pricing, and more).",
+    "mod_menu": "<strong>Interactive Digital Menu:</strong> Smooth browsing of available products and categories.",
+    "mod_pos": "<strong>POS / Cash Register Module:</strong> Tool for fast calculation and simulation of orders and totals.",
+    "mod_admin": "<strong>Administrative Panel:</strong> Structured view for catalog management and updates.",
+    "mod_vanillajs": "<strong>Client-Side Logic (Vanilla JS):</strong> Application state management, component interactivity, and responsive UI directly in the browser."
+  },
+  "mascatinder": {
+    "subtitle": "Interaction and social connection platform linked to the UCV student community",
+    "intro_p1": "<strong>MascaTinder</strong> is an interactive web application developed to boost social interaction among members of the humorous channel \"www.Losmascapipes.UCV\". The platform serves as a digital hub facilitating publication, exploration, and profile connections in a fast and modern way.",
+    "intro_p2": "The project uses <strong>Supabase</strong> as Backend-as-a-Service (BaaS) for file storage management, authentication, and data persistence, paired with a lightweight interface built with Vanilla JavaScript.",
+    "mod_supabase": "<strong>Supabase Integration:</strong> Relational database for interactive post logging and centralized profile management.",
+    "mod_realtime": "<strong>Real-Time Chat:</strong> Implementation of Supabase subscriptions to enable instant and seamless messaging between users.",
+    "mod_auth": "<strong>Authentication & Account Recovery:</strong> Secure user management flow with password recovery via email.",
+    "mod_feed": "<strong>Interactive Cards Feed:</strong> Dynamic system for profile navigation and viewing processed client-side via JavaScript.",
+    "mod_responsive": "<strong>Adaptive & Modern Design:</strong> Mobile app-like interface aesthetic, fully optimized for any screen size."
+  },
+  "devodoru": {
+    "subtitle": "Dynamic web catalog and content manager for game developer",
+    "intro_p1": "<strong>DevOdoru Portfolio</strong> is a custom-built web platform designed to showcase indie video game development projects. The system combines an engaging landing page for players with a robust administrative suite for catalog management.",
+    "intro_p2": "The backend is powered by <strong>Supabase</strong>, utilizing its PostgreSQL relational database, secure authentication engine, and media storage bucket to manage screenshots and assets for each published title.",
+    "mod_landing": "<strong>Landing Page & Showcase Cards:</strong> Displays each game through an interactive preview with title, detailed description, side gallery of screenshots, and a direct link to the external download platform (Itch.io, Steam, etc.).",
+    "mod_auth": "<strong>Secure Auth with Supabase Auth:</strong> Restricted access to the administration panel via session token verification. Includes an email password recovery system.",
+    "mod_crud": "<strong>CRUD Administrative Panel:</strong> Exclusive module allowing the developer to publish new releases, update existing information, or instantly remove projects.",
+    "mod_storage": "<strong>Media Management (Supabase Storage):</strong> Dynamic upload and optimization of promotional images and screenshots from the client to the cloud.",
+    "mod_responsive": "<strong>Adaptive Design:</strong> Optimized experience for browsing the game catalog on both mobile devices and desktop screens."
   }
 }

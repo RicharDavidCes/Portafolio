@@ -52,7 +52,7 @@
     },
     "p2": {
       "title": "Campus Virtual - Dashboard Administrativo",
-      "description": "Módulo de administración CRUD con filtros dinámicos en tiempo real. Para manejo académico a nivel secundario."
+      "description": "Módulo de administración para manejo académico a nivel secundario."
     },
     "p3": {
       "title": "Cafetín Central",
@@ -70,14 +70,54 @@
   "detail": {
     "stack_title": "Stack & Tecnologías Utilizadas",
     "description_title": "Descripción del Proyecto",
-    "p1_intro": "Esta herramienta fue desarrollada para facilitar a los estudiantes el acceso organizado a guías, problemarios y parciales resueltos estructurados por semestres académicos y materias. Su diseño prioriza el rendimiento, permitiendo filtrados rápidos y una consulta fluida de los recursos almacenados en la nube.",
-    "modules_title": "Módulos Claves & Características:",
-    "mod_chatbot": "<strong>Asistente Virtual (Chatbot):</strong> Módulo integrado para orientar al estudiante resolviendo dudas sobre los diversos materiales en la web y personales de sus materias.",
-    "mod_search": "<strong>Búsqueda & Filtros Dinámicos:</strong> Barra de búsqueda optimizada para la localización rápida de materias.",
-    "mod_responsive": "<strong>Diseño Adaptativo (Responsive):</strong> Interfaz totalmente fluida y accesible desde cualquier tipo de dispositivo móvil o de escritorio.",
-    "mod_404": "<strong>Control de Navegación (Página 404):</strong> Manejo de errores de ruta con una vista personalizada para guiar al usuario de vuelta.",
-    "mod_admin": "<strong>Panel Administrativo:</strong> Módulo interno para la gestión, actualización y carga ágil del material académico.",
+    "features_title": "Módulos Claves & Características",
     "demo_title": "Demostración & Animaciones",
-    "video_nav": "Navegación y Filtros"
+    "video_nav": "Navegación y Filtros",
+    "video_demo": "Demostración del Panel y Landing"
+  },
+  "recopilado_ucv": {
+    "intro_p1": "<strong>Recopilado de Información UCV</strong> es una herramienta desarrollada para facilitar a los estudiantes el acceso organizado a guías, problemarios y parciales resueltos estructurados por semestres académicos y materias de Ciencias de la Computación.",
+    "intro_p2": "El desarrollo se enfocó en garantizar una alta velocidad de carga, una estructura semántica clara y una experiencia responsiva tanto en dispositivos móviles como en pantallas de escritorio.",
+    "mod_chatbot": "<strong>Asistente Virtual (Chatbot):</strong> Módulo integrado para orientar al estudiante resolviendo dudas.",
+    "mod_search": "<strong>Búsqueda & Filtros Dinámicos:</strong> Barra de búsqueda optimizada para la localización rápida.",
+    "mod_responsive": "<strong>Diseño Adaptativo (Responsive):</strong> Interfaz totalmente fluida.",
+    "mod_404": "<strong>Control de Navegación (Página 404):</strong> Manejo de errores de ruta con una vista personalizada.",
+    "mod_admin": "<strong>Panel Administrativo:</strong> Módulo interno para la gestión del material."
+  },
+  "campus_virtual": {
+    "intro_p1": "<strong>Campus Virtual</strong> es un sistema de gestión educativa diseñado para optimizar la administración académica y el control institucional a nivel secundario. La plataforma centraliza el flujo de información entre docentes, estudiantes y administradores en una interfaz ágil e intuitiva.",
+    "intro_p2": "El sistema está construido bajo la arquitectura <strong>MVC</strong>, garantizando una separación clara entre la lógica de negocio y la interfaz. A través de peticiones asíncronas con <strong>AJAX</strong> y la integración de <strong>MySQL</strong>, ofrece filtrados en tiempo real y operaciones CRUD sin recargas de página.",
+    "mod_admin": "<strong>Panel Administrativo:</strong> Gestión completa de usuarios, matrículas y registros académicos.",
+    "mod_search": "<strong>Búsqueda & Filtros Dinámicos:</strong> Consulta instantánea de registros y recursos.",
+    "mod_responsive": "<strong>Diseño Adaptive & Responsive:</strong> Interfaz optimizada para cualquier tamaño de pantalla.",
+    "mod_errors": "<strong>Manejo de Errores:</strong> Sistema robusto ante errores de entrada, resistente a inyecciones SQL y soporte de transacciones (rollbacks) en inserciones múltiples vinculadas."
+  },
+  "cafetin_central": {
+    "intro_p1": "<strong>Cafetín Central</strong> es una aplicación web completa diseñada para optimizar la administración operativa y la atención comercial en el cafetín de la Facultad de Ciencias de la UCV. La interfaz permite interactuar dinámicamente con un menú digital, llevar el control del punto de venta y supervisar la información administrativa de manera intuitiva. Realizado como proyecto práctico para la asignatura Introducción a la Informática.",
+    "mod_chatbot": "<strong>Asistente Virtual (Chatbot):</strong> Módulo integrado para orientar al estudiante resolviendo dudas sobre el cafetín (horarios, precios y más).",
+    "mod_menu": "<strong>Menú Digital Interactivo:</strong> Visualización fluida de los productos disponibles y sus categorías.",
+    "mod_pos": "<strong>Módulo de Caja Registradora:</strong> Herramienta para el cálculo y la simulación ágil de órdenes e importes.",
+    "mod_admin": "<strong>Panel Administrativo:</strong> Vista estructurada para la gestión y actualización del catálogo.",
+    "mod_vanillajs": "<strong>Lógica en Cliente (Vanilla JS):</strong> Manejo del estado de la aplicación, interactividad de los componentes e interfaz responsiva directamente en el navegador."
+  },
+  "mascatinder": {
+    "subtitle": "Plataforma de interacción y conexión social vinculada a la comunidad estudiantil de la UCV",
+    "intro_p1": "<strong>MascaTinder</strong> es una aplicación web interactiva desarrollada para dinamizar la interacción social entre los miembros del canal humorístico \"www.Losmascapipes.UCV\". La plataforma actúa como un punto de encuentro digital que facilita la publicación, exploración y conexión entre perfiles de forma rápida y moderna.",
+    "intro_p2": "El desarrollo utiliza <strong>Supabase</strong> como Backend-as-a-Service (BaaS) para la gestión del almacenamiento de archivos, autenticación y persistencia de datos, junto con una interfaz liviana construida en Vanilla JavaScript.",
+    "mod_supabase": "<strong>Integración con Supabase:</strong> Base de datos relacional para el registro interactivo de publicaciones y la gestión centralizada de perfiles.",
+    "mod_realtime": "<strong>Chat en Tiempo Real:</strong> Implementación de suscripciones de Supabase para permitir mensajería instantánea y fluida entre usuarios.",
+    "mod_auth": "<strong>Autenticación & Recuperación de Cuenta:</strong> Flujo seguro de gestión de usuarios con recuperación de credenciales mediante correo electrónico.",
+    "mod_feed": "<strong>Feed de Tarjetas Interactivas:</strong> Sistema dinámico para la navegación y visualización de perfiles procesado desde el cliente con JavaScript.",
+    "mod_responsive": "<strong>Diseño Adaptativo & Moderno:</strong> Interfaz con estética de aplicación móvil, completamente optimizada para cualquier pantalla."
+  },
+  "devodoru": {
+    "subtitle": "Catálogo web dinámico y gestor de contenido para desarrollador de videojuegos",
+    "intro_p1": "<strong>Portafolio Devodoru</strong> es una plataforma web desarrollada a la medida para exhibir proyectos de desarrollo de videojuegos independientes. El sistema combina una landing page atractiva para los jugadores con una suite administrativa robusta para la gestión del catálogo.",
+    "intro_p2": "El backend está soportado por <strong>Supabase</strong>, utilizando su base de datos relacional PostgreSQL, su motor de autenticación segura y el bucket de almacenamiento multimedia para gestionar capturas y recursos de cada título publicado.",
+    "mod_landing": "<strong>Landing Page & Tarjetas de Showcase:</strong> Muestra cada videojuego mediante una vista previa interactiva con título, descripción detallada, galería lateral de capturas y enlace directo a la plataforma externa de descarga (Itch.io, Steam, etc.).",
+    "mod_auth": "<strong>Autenticación Segura con Supabase Auth:</strong> Acceso restringido al panel de administración mediante verificación por tokens de sesión. Cuenta con un sistema de recuperación de contraseña por correo electrónico.",
+    "mod_crud": "<strong>Panel Administrativo CRUD:</strong> Módulo exclusivo desde el cual el desarrollador puede publicar nuevos lanzamientos, actualizar la información existente o eliminar proyectos de forma instantánea.",
+    "mod_storage": "<strong>Gestión de Multimedia (Supabase Storage):</strong> Carga y optimización dinámica de imágenes promocionales y screenshots desde el cliente hacia la nube.",
+    "mod_responsive": "<strong>Diseño Adaptativo:</strong> Experiencia optimizada para navegar el catálogo de juegos tanto en dispositivos móviles como en pantallas de escritorio."
   }
 }
