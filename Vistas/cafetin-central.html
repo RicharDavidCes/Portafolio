@@ -216,67 +216,8 @@
     <script src="../JavaScript/theme.js"></script>
     <script src="../JavaScript/app.js"></script>
 
-    <!-- 3. Lógica específica de la galería y modal -->
-    <script>
-        function changeImage(element) {
-            document.getElementById('active-image').src = element.src;
-            document.querySelectorAll('.thumb').forEach(thumb => thumb.classList.remove('active'));
-            element.classList.add('active');
-            
-            const modalImg = document.getElementById('modal-img');
-            if (modalImg) {
-                modalImg.src = element.src;
-            }
-        }
-
-        function openModal() {
-            const activeImg = document.getElementById('active-image');
-            const modal = document.getElementById('image-modal');
-            const modalImg = document.getElementById('modal-img');
-            
-            modalImg.src = activeImg.src;
-            modal.classList.add('show');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal(event) {
-            if (event.target.closest('.modal-nav-btn')) return;
-
-            if (event.target.id === 'image-modal' || event.target.classList.contains('close-modal')) {
-                const modal = document.getElementById('image-modal');
-                modal.classList.remove('show');
-                document.body.style.overflow = 'auto';
-            }
-        }
-
-        function navigateGallery(direction) {
-            const thumbs = Array.from(document.querySelectorAll('.thumb'));
-            if (thumbs.length === 0) return;
-
-            const currentIndex = thumbs.findIndex(thumb => thumb.classList.contains('active'));
-            let newIndex = currentIndex + direction;
-
-            if (newIndex >= thumbs.length) newIndex = 0;
-            if (newIndex < 0) newIndex = thumbs.length - 1;
-
-            changeImage(thumbs[newIndex]);
-            thumbs[newIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
-        }
-
-        document.addEventListener('keydown', function(event) {
-            const modal = document.getElementById('image-modal');
-            const isModalOpen = modal && modal.classList.contains('show');
-
-            if (event.key === 'ArrowRight') {
-                navigateGallery(1);
-            } else if (event.key === 'ArrowLeft') {
-                navigateGallery(-1);
-            } else if (event.key === 'Escape' && isModalOpen) {
-                modal.classList.remove('show');
-                document.body.style.overflow = 'auto';
-            }
-        });
-    </script>
+    <!-- 3. Lógica específica de galería y modal -->
+    <script src="../JavaScript/modal.js"></script>
 
 </body>
 </html>
