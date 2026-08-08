@@ -523,3 +523,33 @@ footer {
     box-shadow: 0 4px 10px var(--shadow-color);
 }
 
+/* --- Estilos extraídos de elementos inline --- */
+
+/* 1. Contenedor de acciones del header */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* 2. Color dinámico en badges de habilidades */
+.skill-badge {
+    --hover-color: var(--badge-color, var(--accent-blue));
+}
+
+/* Clases específicas para el color hover de cada tecnología */
+.skill-badge.js      { --badge-color: #f7df1e; }
+.skill-badge.php     { --badge-color: #777bb4; }
+.skill-badge.cpp     { --badge-color: #00599c; }
+.skill-badge.html    { --badge-color: #e34f26; }
+.skill-badge.css     { --badge-color: #1572b6; }
+.skill-badge.mysql   { --badge-color: #4479a1; }
+.skill-badge.mysqli  { --badge-color: #00758f; }
+.skill-badge.supabase{ --badge-color: #3ecf8e; }
+.skill-badge.phpmyadmin { --badge-color: #f29111; }
+.skill-badge.git     { --badge-color: #f05032; }
+.skill-badge.jquery  { --badge-color: #0769ad; }
+.skill-badge.xampp   { --badge-color: #fb7a24; }
+.skill-badge.mvc     { --badge-color: #2f81f7; }
+.skill-badge.poo     { --badge-color: #8e44ad; }
+.skill-badge.ajax    { --badge-color: #007ce2; }

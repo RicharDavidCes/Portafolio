@@ -56,6 +56,12 @@
     flex-wrap: wrap;
 }
 
+/* Estilos para el enlace del logo */
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Animación sutil flotante para el icono central */
 @keyframes floatBug {
     0%, 100% {
