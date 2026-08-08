@@ -65,17 +65,17 @@
 
     <header class="navbar">
         <div class="logo">
-            <a href="../index.html" style="text-decoration: none; color: inherit;"><span>&lt;RC /&gt;</span></a>
+            <a href="../index.html" class="logo-link"><span>&lt;RC /&gt;</span></a>
         </div>
 
-        <nav class="nav-controls" style="display: flex; align-items: center; gap: 8px;">
+        <nav class="nav-controls">
             <a href="../index.html#projects" class="btn btn-outline" aria-label="Volver a proyectos">
                 <i class="fas fa-arrow-left"></i> 
                 <span data-i18n="nav.back_to_projects">Volver a Proyectos</span>
             </a>
         </nav>
 
-        <div class="header-actions" style="display: flex; align-items: center; gap: 15px;">
+        <div class="header-actions">
             <!-- Botón de Cambio de Idioma -->
             <button id="language-switcher" class="lang-btn" aria-label="Cambiar idioma">
                 <i class="fas fa-globe"></i> <span id="lang-label">EN</span>
@@ -158,21 +158,21 @@
                     El sistema está construido bajo la arquitectura <strong>MVC</strong>, garantizando una separación clara entre la lógica de negocio y la interfaz. A través de peticiones asíncronas con <strong>AJAX</strong> y la integración de <strong>MySQL</strong>, ofrece filtrados en tiempo real y operaciones CRUD sin recargas de página.
                 </p>
                 <p><strong data-i18n="campus_virtual.modules_title">Módulos y Características Clave:</strong></p>
-                <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
+                <ul class="feature-list">
                     <li>
-                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <i class="fas fa-check-circle feature-list-icon"></i>
                         <span data-i18n="[html]campus_virtual.mod_admin"><strong>Panel Administrativo:</strong> Gestión completa de usuarios, matrículas y registros académicos.</span>
                     </li>
                     <li>
-                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <i class="fas fa-check-circle feature-list-icon"></i>
                         <span data-i18n="[html]campus_virtual.mod_search"><strong>Búsqueda & Filtros Dinámicos:</strong> Consulta instantánea de registros y recursos.</span>
                     </li>
                     <li>
-                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <i class="fas fa-check-circle feature-list-icon"></i>
                         <span data-i18n="[html]campus_virtual.mod_responsive"><strong>Diseño Adaptive & Responsive:</strong> Interfaz optimizada para cualquier tamaño de pantalla.</span>
                     </li>
                     <li>
-                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <i class="fas fa-check-circle feature-list-icon"></i>
                         <span data-i18n="[html]campus_virtual.mod_errors"><strong>Manejo de Errores:</strong> Sistema robusto ante errores de entrada, resistente a inyecciones SQL y soporte de transacciones (rollbacks) en inserciones múltiples vinculadas.</span>
                     </li>
                 </ul>

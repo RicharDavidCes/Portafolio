@@ -65,17 +65,17 @@
 
     <header class="navbar">
         <div class="logo">
-            <a href="../index.html" style="text-decoration: none; color: inherit;"><span>&lt;RC /&gt;</span></a>
+            <a href="../index.html" class="logo-link"><span>&lt;RC /&gt;</span></a>
         </div>
         
-        <nav class="nav-controls" style="display: flex; align-items: center; gap: 8px;">
+        <nav class="nav-controls">
             <a href="../index.html#projects" class="btn btn-outline" aria-label="Volver a proyectos">
                 <i class="fas fa-arrow-left"></i> 
                 <span data-i18n="nav.back_to_projects">Volver a Proyectos</span>
             </a>
         </nav>
 
-        <div class="header-actions" style="display: flex; align-items: center; gap: 15px;">
+        <div class="header-actions">
             <!-- Botón de Cambio de Idioma -->
             <button id="language-switcher" class="lang-btn" aria-label="Cambiar idioma">
                 <i class="fas fa-globe"></i> <span id="lang-label">EN</span>
@@ -153,25 +153,25 @@
                     El desarrollo utiliza <strong>Supabase</strong> como Backend-as-a-Service (BaaS) para la gestión del almacenamiento de archivos, autenticación y persistencia de datos, junto con una interfaz liviana construida en Vanilla JavaScript.
                 </p>
                 <p><strong data-i18n="detail.features_title">Módulos Claves & Características:</strong></p>
-                <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
+                <ul class="feature-list">
                     <li>
-                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <i class="fas fa-check-circle feature-list-icon"></i>
                         <span data-i18n="[html]mascatinder.mod_supabase"><strong>Integración con Supabase:</strong> Base de datos relacional para el registro interactivo de publicaciones y la gestión centralizada de perfiles.</span>
                     </li>
                     <li>
-                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <i class="fas fa-check-circle feature-list-icon"></i>
                         <span data-i18n="[html]mascatinder.mod_realtime"><strong>Chat en Tiempo Real:</strong> Implementación de suscripciones de Supabase para permitir mensajería instantánea y fluida entre usuarios.</span>
                     </li>
                     <li>
-                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <i class="fas fa-check-circle feature-list-icon"></i>
                         <span data-i18n="[html]mascatinder.mod_auth"><strong>Autenticación & Recuperación de Cuenta:</strong> Flujo seguro de gestión de usuarios con recuperación de credenciales mediante correo electrónico.</span>
                     </li>
                     <li>
-                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <i class="fas fa-check-circle feature-list-icon"></i>
                         <span data-i18n="[html]mascatinder.mod_feed"><strong>Feed de Tarjetas Interactivas:</strong> Sistema dinámico para la navegación y visualización de perfiles procesado desde el cliente con JavaScript.</span>
                     </li>
                     <li>
-                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <i class="fas fa-check-circle feature-list-icon"></i>
                         <span data-i18n="[html]mascatinder.mod_responsive"><strong>Diseño Adaptativo & Moderno:</strong> Interfaz con estética de aplicación móvil, completamente optimizada para cualquier pantalla.</span>
                     </li>
                 </ul>

@@ -463,3 +463,40 @@
         padding: 6px 8px !important;
     }
 }
+
+
+/* ==========================================================================
+   ESTILOS DE ESTRUCTURA Y LISTAS PARA VISTAS DE DETALLE DE PROYECTO
+   ========================================================================== */
+
+/* Enlace dentro del logo en la barra de navegación */
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Espaciados y alineación del navbar */
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Lista de características / módulos */
+.feature-list {
+    list-style: none;
+    padding-left: 0;
+    line-height: 1.8;
+}
+
+/* Iconos de viñeta (Checkmarks) dentro de las listas */
+.feature-list-icon {
+    color: var(--accent-blue, #2f81f7);
+    margin-right: 8px;
+}
