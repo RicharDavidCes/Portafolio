@@ -16,30 +16,30 @@
     <link rel="canonical" href="https://portafolio-xt6g.onrender.com/Vistas/recopilado-ucv.html">
 
     <!-- Favicons & Manifest -->
-    <link rel="icon" type="image/svg+xml" href="https://portafolio-xt6g.onrender.com/Imagenes/favicon.svg">
-    <link rel="icon" type="image/webp" sizes="32x32" href="https://portafolio-xt6g.onrender.com/Imagenes/favicon.webp">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://portafolio-xt6g.onrender.com/Imagenes/favicon.webp">
+    <link rel="icon" type="image/svg+xml" href="https://portafolio-xt6g.onrender.com/Imagenes/favicon.svg" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="https://portafolio-xt6g.onrender.com/Imagenes/favicon.webp" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://portafolio-xt6g.onrender.com/Imagenes/favicon.webp" />
     <link rel="manifest" href="../manifest.json">
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://portafolio-xt6g.onrender.com/Vistas/recopilado-ucv.html">
-    <meta property="og:title" content="Recopilado UCV | Portafolio">
-    <meta property="og:description" content="Plataforma web interactiva para buscar material de estudio por semestres académicos y materias.">
-    <meta property="og:image" content="https://portafolio-xt6g.onrender.com/Imagenes/recopilado1.webp">
-    <meta property="og:image:secure_url" content="https://portafolio-xt6g.onrender.com/Imagenes/recopilado1.webp">
-    <meta property="og:image:type" content="image/webp">
-    <meta property="og:image:width" content="1199">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Recopilado UCV | Portafolio">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://portafolio-xt6g.onrender.com/Vistas/recopilado-ucv.html" />
+    <meta property="og:title" content="Recopilado UCV | Portafolio" />
+    <meta property="og:description" content="Plataforma web interactiva para buscar material de estudio por semestres académicos y materias." />
+    <meta property="og:image" content="https://portafolio-xt6g.onrender.com/Imagenes/recopilado1.webp" />
+    <meta property="og:image:secure_url" content="https://portafolio-xt6g.onrender.com/Imagenes/recopilado1.webp" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="1199" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Recopilado UCV | Portafolio" />
 
     <!-- Twitter / X Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Recopilado UCV | Portafolio">
-    <meta name="twitter:description" content="Plataforma web interactiva para buscar material de estudio por semestres académicos y materias.">
-    <meta name="twitter:image" content="https://portafolio-xt6g.onrender.com/Imagenes/recopilado1.webp">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Recopilado UCV | Portafolio" />
+    <meta name="twitter:description" content="Plataforma web interactiva para buscar material de estudio por semestres académicos y materias." />
+    <meta name="twitter:image" content="https://portafolio-xt6g.onrender.com/Imagenes/recopilado1.webp" />
 
-    <!-- Control Temprano del Tema -->
+    <!-- Control Temprano del Tema para evitar parpadeos de color -->
     <script src="../JavaScript/theme-head.js"></script>
 
     <!-- Datos Estructurados JSON-LD -->
@@ -65,17 +65,17 @@
 
     <header class="navbar">
         <div class="logo">
-            <a href="../index.html" class="logo-link"><span>&lt;RC /&gt;</span></a>
+            <a href="../index.html" style="text-decoration: none; color: inherit;"><span>&lt;RC /&gt;</span></a>
         </div>
         
-        <nav class="nav-controls">
+        <nav class="nav-controls" style="display: flex; align-items: center; gap: 8px;">
             <a href="../index.html#projects" class="btn btn-outline" aria-label="Volver a proyectos">
                 <i class="fas fa-arrow-left"></i> 
                 <span data-i18n="nav.back_to_projects">Volver a Proyectos</span>
             </a>
         </nav>
 
-        <div class="header-actions">
+        <div class="header-actions" style="display: flex; align-items: center; gap: 15px;">
             <!-- Botón de Cambio de Idioma -->
             <button id="language-switcher" class="lang-btn" aria-label="Cambiar idioma">
                 <i class="fas fa-globe"></i> <span id="lang-label">EN</span>
@@ -83,7 +83,7 @@
 
             <div class="theme-switch-wrapper">
                 <label class="theme-switch" for="checkbox">
-                    <input type="checkbox" id="checkbox" aria-label="Cambiar entre modo claro y modo oscuro">
+                    <input type="checkbox" id="checkbox" aria-label="Cambiar entre modo claro y modo oscuro"/>
                     <div class="slider round">
                         <i class="fas fa-moon"></i>
                         <i class="fas fa-sun"></i>
@@ -117,15 +117,15 @@
             
             <div class="thumbnail-bar">
                 <img src="../Imagenes/recopilado1.webp" alt="Captura 1" class="thumb active" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado2.webp" alt="Captura 2" class="thumb" loading="lazy" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado3.webp" alt="Captura 3" class="thumb" loading="lazy" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado4.webp" alt="Captura 4" class="thumb" loading="lazy" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado5.webp" alt="Captura 5" class="thumb" loading="lazy" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado6.webp" alt="Captura 6" class="thumb" loading="lazy" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado7.webp" alt="Captura 7" class="thumb" loading="lazy" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado8.webp" alt="Captura 8" class="thumb" loading="lazy" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado9.webp" alt="Captura 9" class="thumb" loading="lazy" onclick="changeImage(this)">
-                <img src="../Imagenes/recopilado10.webp" alt="Captura 10" class="thumb" loading="lazy" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado2.webp" alt="Captura 2" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado3.webp" alt="Captura 3" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado4.webp" alt="Captura 4" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado5.webp" alt="Captura 5" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado6.webp" alt="Captura 6" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado7.webp" alt="Captura 7" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado8.webp" alt="Captura 8" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado9.webp" alt="Captura 9" class="thumb" onclick="changeImage(this)">
+                <img src="../Imagenes/recopilado10.webp" alt="Captura 10" class="thumb" onclick="changeImage(this)">
             </div>
         </section>
 
@@ -151,25 +151,25 @@
                     El desarrollo se enfocó en garantizar una alta velocidad de carga, una estructura semántica clara y una experiencia responsiva tanto en dispositivos móviles como en pantallas de escritorio.
                 </p>
                 <p><strong data-i18n="detail.features_title">Módulos Claves & Características:</strong></p>
-                <ul class="features-list">
+                <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
                     <li>
-                        <i class="fas fa-check-circle feature-icon"></i>
+                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
                         <span data-i18n="[html]recopilado_ucv.mod_chatbot"><strong>Asistente Virtual (Chatbot):</strong> Módulo integrado para orientar al estudiante resolviendo dudas.</span>
                     </li>
                     <li>
-                        <i class="fas fa-check-circle feature-icon"></i>
+                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
                         <span data-i18n="[html]recopilado_ucv.mod_search"><strong>Búsqueda & Filtros Dinámicos:</strong> Barra de búsqueda optimizada para la localización rápida.</span>
                     </li>
                     <li>
-                        <i class="fas fa-check-circle feature-icon"></i>
+                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
                         <span data-i18n="[html]recopilado_ucv.mod_responsive"><strong>Diseño Adaptativo (Responsive):</strong> Interfaz totalmente fluida.</span>
                     </li>
                     <li>
-                        <i class="fas fa-check-circle feature-icon"></i>
+                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
                         <span data-i18n="[html]recopilado_ucv.mod_404"><strong>Control de Navegación (Página 404):</strong> Manejo de errores de ruta con una vista personalizada.</span>
                     </li>
                     <li>
-                        <i class="fas fa-check-circle feature-icon"></i>
+                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
                         <span data-i18n="[html]recopilado_ucv.mod_admin"><strong>Panel Administrativo:</strong> Módulo interno para la gestión del material.</span>
                     </li>
                 </ul>
@@ -213,15 +213,16 @@
         <p>&copy; 2026 Richard Cespedes. Guarenas, Miranda, Venezuela.</p>
     </footer>
 
-    <!-- Dependencias de i18next -->
+    <!-- 1. Cargar dependencias de i18next PRIMERO -->
     <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
     <script src="https://unpkg.com/i18next-http-backend/i18nextHttpBackend.min.js"></script>
     <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js"></script>
 
-    <!-- Scripts de la aplicación -->
+    <!-- 2. Cargar scripts propios de la aplicación -->
     <script src="../JavaScript/theme.js"></script>
     <script src="../JavaScript/app.js"></script>
-    <script src="../JavaScript/modal.js"></script>
 
+    <!-- 3. Lógica específica de la galería y modal -->
+    <script src="../JavaScript/modal.js"></script>
 </body>
 </html>
