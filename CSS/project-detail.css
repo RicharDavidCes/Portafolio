@@ -464,39 +464,39 @@
     }
 }
 
-
 /* ==========================================================================
-   ESTILOS DE ESTRUCTURA Y LISTAS PARA VISTAS DE DETALLE DE PROYECTO
+   CLASES EXTRAÍDAS DE ESTILOS INLINE
    ========================================================================== */
 
-/* Enlace dentro del logo en la barra de navegación */
+/* Enlace del Logo en la Navbar */
 .logo-link {
     text-decoration: none;
     color: inherit;
 }
 
-/* Espaciados y alineación del navbar */
+/* Contenedor de Controles de Navegación */
 .nav-controls {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
+/* Contenedor de Acciones del Header */
 .header-actions {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-/* Lista de características / módulos */
+/* Lista de Características de Proyectos */
 .feature-list {
     list-style: none;
     padding-left: 0;
     line-height: 1.8;
 }
 
-/* Iconos de viñeta (Checkmarks) dentro de las listas */
-.feature-list-icon {
+/* Icono de Check en Listas */
+.check-icon {
     color: var(--accent-blue, #2f81f7);
     margin-right: 8px;
 }

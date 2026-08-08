@@ -63,14 +63,14 @@
 </head>
 <body>
 
-    <header class="navbar">
+<header class="navbar">
         <div class="logo">
             <a href="../index.html" style="text-decoration: none; color: inherit;"><span>&lt;RC /&gt;</span></a>
         </div>
         
         <nav class="nav-controls" style="display: flex; align-items: center; gap: 8px;">
             <a href="../index.html#projects" class="btn btn-outline" aria-label="Volver a proyectos">
-                <i class="fas fa-arrow-left"></i> 
+                <i class="fas fa-arrow-left" aria-hidden="true"></i> 
                 <span data-i18n="nav.back_to_projects">Volver a Proyectos</span>
             </a>
         </nav>
@@ -78,15 +78,15 @@
         <div class="header-actions" style="display: flex; align-items: center; gap: 15px;">
             <!-- Botón de Cambio de Idioma -->
             <button id="language-switcher" class="lang-btn" aria-label="Cambiar idioma">
-                <i class="fas fa-globe"></i> <span id="lang-label">EN</span>
+                <i class="fas fa-globe" aria-hidden="true"></i> <span id="lang-label">EN</span>
             </button>
 
             <div class="theme-switch-wrapper">
                 <label class="theme-switch" for="checkbox">
                     <input type="checkbox" id="checkbox" aria-label="Cambiar entre modo claro y modo oscuro"/>
                     <div class="slider round">
-                        <i class="fas fa-moon"></i>
-                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon" aria-hidden="true"></i>
+                        <i class="fas fa-sun" aria-hidden="true"></i>
                     </div>
                 </label>
             </div>
@@ -102,16 +102,16 @@
         </header>
 
         <!-- 2. Galería de Imágenes -->
-        <section class="gallery-section">
+        <section class="gallery-section" aria-label="Galería de imágenes del proyecto">
             <div class="main-display">
                 <button class="nav-btn prev-btn" onclick="navigateGallery(-1)" aria-label="Imagen anterior">
-                    <i class="fas fa-chevron-left"></i>
+                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
                 </button>
 
-                <img id="active-image" src="../Imagenes/devodoru1.webp" alt="Vista previa principal" class="zoomable-img" onclick="openModal()">
+                <img id="active-image" src="../Imagenes/devodoru1.webp" alt="Vista previa principal de Portafolio Devodoru" class="zoomable-img" onclick="openModal()">
 
                 <button class="nav-btn next-btn" onclick="navigateGallery(1)" aria-label="Siguiente imagen">
-                    <i class="fas fa-chevron-right"></i>
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
                 </button>
             </div>
             
@@ -125,18 +125,18 @@
 
         <!-- 3. Stack & Tecnologías -->
         <section class="detail-block">
-            <h2><i class="fas fa-tags"></i> <span data-i18n="detail.stack_title">Stack & Tecnologías Utilizadas</span></h2>
+            <h2><i class="fas fa-tags" aria-hidden="true"></i> <span data-i18n="detail.stack_title">Stack & Tecnologías Utilizadas</span></h2>
             <div class="tags-container">
-                <span class="tag-badge"><i class="fab fa-html5"></i> HTML5</span>
-                <span class="tag-badge"><i class="fab fa-css3-alt"></i> CSS3</span>
-                <span class="tag-badge"><i class="fab fa-js"></i> JavaScript</span>
-                <span class="tag-badge"><i class="fas fa-database"></i> Supabase</span>
+                <span class="tag-badge"><i class="fab fa-html5" aria-hidden="true"></i> HTML5</span>
+                <span class="tag-badge"><i class="fab fa-css3-alt" aria-hidden="true"></i> CSS3</span>
+                <span class="tag-badge"><i class="fab fa-js" aria-hidden="true"></i> JavaScript</span>
+                <span class="tag-badge"><i class="fas fa-database" aria-hidden="true"></i> Supabase</span>
             </div>
         </section>
 
         <!-- 4. Descripción del Proyecto -->
         <section class="detail-block">
-            <h2><i class="fas fa-align-left"></i> <span data-i18n="detail.description_title">Descripción del Proyecto</span></h2>
+            <h2><i class="fas fa-align-left" aria-hidden="true"></i> <span data-i18n="detail.description_title">Descripción del Proyecto</span></h2>
             <div class="project-description">
                 <p data-i18n="[html]devodoru.intro_p1">
                     <strong>Portafolio Devodoru</strong> es una plataforma web desarrollada a la medida para exhibir proyectos de desarrollo de videojuegos independientes. El sistema combina una landing page atractiva para los jugadores con una suite administrativa robusta para la gestión del catálogo.
@@ -145,32 +145,32 @@
                     El backend está soportado por <strong>Supabase</strong>, utilizando su base de datos relacional PostgreSQL, su motor de autenticación segura y el bucket de almacenamiento multimedia para gestionar capturas y recursos de cada título publicado.
                 </p>
 
-                <div class="footer-credits">
+                <div class="footer-credits" style="margin: 1.5rem 0;">
                     <a href="https://portafolio-devodoru.onrender.com/index.html" class="credit-link" target="_blank" rel="noopener noreferrer">
-                        Portafolio DevOdoru <i class="fas fa-external-link-alt credit-icon"></i>
+                        Portafolio DevOdoru <i class="fas fa-external-link-alt credit-icon" aria-hidden="true"></i>
                     </a>
                 </div>
 
-                <p><strong data-i18n="detail.features_title">Módulos Claves & Características:</strong></p>
+                <h3 style="font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.8rem;" data-i18n="detail.features_title">Módulos Claves & Características</h3>
                 <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
                     <li>
-                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;" aria-hidden="true"></i>
                         <span data-i18n="[html]devodoru.mod_landing"><strong>Landing Page & Tarjetas de Showcase:</strong> Muestra cada videojuego mediante una vista previa interactiva con título, descripción detallada, galería lateral de capturas y enlace directo a la plataforma externa de descarga (Itch.io, Steam, etc.).</span>
                     </li>
                     <li>
-                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;" aria-hidden="true"></i>
                         <span data-i18n="[html]devodoru.mod_auth"><strong>Autenticación Segura con Supabase Auth:</strong> Acceso restringido al panel de administración mediante verificación por tokens de sesión. Cuenta con un sistema de recuperación de contraseña por correo electrónico.</span>
                     </li>
                     <li>
-                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;" aria-hidden="true"></i>
                         <span data-i18n="[html]devodoru.mod_crud"><strong>Panel Administrativo CRUD:</strong> Módulo exclusivo desde el cual el desarrollador puede publicar nuevos lanzamientos, actualizar la información existente o eliminar proyectos de forma instantánea.</span>
                     </li>
                     <li>
-                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;" aria-hidden="true"></i>
                         <span data-i18n="[html]devodoru.mod_storage"><strong>Gestión de Multimedia (Supabase Storage):</strong> Carga y optimización dinámica de imágenes promocionales y screenshots desde el cliente hacia la nube.</span>
                     </li>
                     <li>
-                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;"></i>
+                        <i class="fas fa-check-circle" style="color: var(--accent-color, #2f81f7); margin-right: 8px;" aria-hidden="true"></i>
                         <span data-i18n="[html]devodoru.mod_responsive"><strong>Diseño Adaptativo:</strong> Experiencia optimizada para navegar el catálogo de juegos tanto en dispositivos móviles como en pantallas de escritorio.</span>
                     </li>
                 </ul>
@@ -179,7 +179,7 @@
 
         <!-- 5. Anexo de Animaciones y Videos -->
         <section class="detail-block">
-            <h2><i class="fas fa-film"></i> <span data-i18n="detail.demo_title">Demostración & Animaciones</span></h2>
+            <h2><i class="fas fa-film" aria-hidden="true"></i> <span data-i18n="detail.demo_title">Demostración & Animaciones</span></h2>
             <div class="video-grid">
                 <div class="video-card">
                     <h3 data-i18n="detail.video_demo">Demostración del Panel y Landing</h3>
@@ -196,17 +196,17 @@
     </main>
 
     <!-- Modal Lightbox Ampliado -->
-    <div id="image-modal" class="image-modal" onclick="closeModal(event)">
+    <div id="image-modal" class="image-modal" onclick="closeModal(event)" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
         <span class="close-modal">&times;</span>
         
         <button class="modal-nav-btn modal-prev-btn" onclick="navigateGallery(-1)" aria-label="Imagen anterior en modal">
-            <i class="fas fa-chevron-left"></i>
+            <i class="fas fa-chevron-left" aria-hidden="true"></i>
         </button>
         
-        <img class="modal-content" id="modal-img" alt="Imagen ampliada">
+        <img class="modal-content" id="modal-img" alt="Vista ampliada del proyecto">
         
         <button class="modal-nav-btn modal-next-btn" onclick="navigateGallery(1)" aria-label="Siguiente imagen en modal">
-            <i class="fas fa-chevron-right"></i>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
         </button>
     </div>
 
